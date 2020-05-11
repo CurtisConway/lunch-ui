@@ -1,0 +1,42 @@
+@import '../../assets/sass/_variables';
+@import '../../assets/sass/_mixins';
+
+button {
+  appearance:none;
+  box-shadow:none;
+  border:none;
+  outline:none;
+  background:none;
+  padding:0;
+  display:block;
+}
+
+.lu-button {
+  background-color:$black;
+  color:$white;
+  text-decoration:none;
+  font-size:$base;
+  line-height:1em;
+  vertical-align:middle;
+  font-family: $defaultFont;
+  height: $defaultInputHeight;
+  min-height:$defaultInputHeight;
+  border-radius:$defaultRadius;
+
+  &.small {
+    max-width:150px;
+  }
+
+  &.large {
+    max-width:300px;
+  }
+
+  &.fluid {
+    width:100%;
+  }
+}
+
+a.lu-button {
+  @include flexCenter();
+  flex-basis:auto;
+}
