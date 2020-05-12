@@ -7,6 +7,7 @@ $pink: #E91E63;
 $purple: #9C27B0;
 $deep-purple: #673AB7;
 $indigo: #3F51B5;
+$blue: #2196F3;
 $light-blue: #03A9F4;
 $cyan: #00BCD4;
 $teal: #009688;
@@ -21,6 +22,28 @@ $blue-grey: #607D8B;
 $grey: #9E9E9E;
 $black: #000;
 $white: #FFF;
+$colors: (
+  red: $red,
+  pink: $pink,
+  purple: $purple,
+  deep-purple: $deep-purple,
+  indigo: $indigo,
+  blue: $blue,
+  light-blue: $light-blue,
+  cyan: $cyan,
+  teal: $teal,
+  green: $green,
+  light-green: $light-green,
+  lime: $lime,
+  amber: $amber,
+  orange: $orange,
+  deep-orange: $deep-orange,
+  brown: $brown,
+  blue-grey: $blue-grey,
+  grey: $grey,
+  black: $black,
+  white: $white
+);
 
 //////////////////////
 // TYPOGRAPHY
