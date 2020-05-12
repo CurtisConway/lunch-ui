@@ -82,7 +82,7 @@ describe('LuButton.vue', () => {
       },
     });
 
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('should render an <a> tag when using to prop', () => {
@@ -92,7 +92,7 @@ describe('LuButton.vue', () => {
       },
     });
 
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it('should have text color class when using the text style', () => {
@@ -101,9 +101,9 @@ describe('LuButton.vue', () => {
         color: 'green',
         type: 'text',
       },
-    })
+    });
 
-    expect(wrapper.classes('text-green')).toBe(true)
+    expect(wrapper.classes('text-green')).toBe(true);
   })
 
   it('should have text color class and border color class when using the outline style', () => {
@@ -112,10 +112,10 @@ describe('LuButton.vue', () => {
         color: 'green',
         type: 'outline',
       },
-    })
+    });
 
-    expect(wrapper.classes('text-green')).toBe(true)
-    expect(wrapper.classes('border-green')).toBe(true)
+    expect(wrapper.classes('text-green')).toBe(true);
+    expect(wrapper.classes('border-green')).toBe(true);
   })
 
   it('should have background color class and border color class when using the solid style', () => {
@@ -124,11 +124,11 @@ describe('LuButton.vue', () => {
         color: 'green',
         type: 'solid',
       },
-    })
+    });
 
-    expect(wrapper.classes('bg-green')).toBe(true)
-    expect(wrapper.classes('border-green')).toBe(true)
-  })
+    expect(wrapper.classes('bg-green')).toBe(true);
+    expect(wrapper.classes('border-green')).toBe(true);
+  });
 
   it('should emit a click event', async () => {
     const wrapper = mountFunction({
@@ -137,15 +137,15 @@ describe('LuButton.vue', () => {
       },
     })
 
-    const click = jest.fn()
-    wrapper.vm.$on('click', click)
-    wrapper.trigger('click')
+    const click = jest.fn();
+    wrapper.vm.$on('click', click);
+    wrapper.trigger('click');
 
-    wrapper.setProps({ href: undefined, to: '/foo' })
-    wrapper.trigger('click')
+    wrapper.setProps({ href: undefined, to: '/foo' });
+    wrapper.trigger('click');
 
-    expect(click.mock.calls).toHaveLength(2)
-  })
+    expect(click.mock.calls).toHaveLength(2);
+  });
 
   it('should have the disabled class if disabled', async () => {
     const wrapper = mountFunction({
@@ -153,10 +153,10 @@ describe('LuButton.vue', () => {
         href: '#!',
         disabled: true,
       },
-    })
+    });
 
-    expect(wrapper.classes('disabled')).toBe(true)
-  })
+    expect(wrapper.classes('disabled')).toBe(true);
+  });
 
   it('should not emit a click event if disabled', async () => {
     const wrapper = mountFunction({
@@ -164,12 +164,12 @@ describe('LuButton.vue', () => {
         href: '#!',
         disabled: true,
       },
-    })
+    });
 
-    const click = jest.fn()
-    wrapper.vm.$on('click', click)
-    wrapper.trigger('click')
+    const click = jest.fn();
+    wrapper.vm.$on('click', click);
+    wrapper.trigger('click');
 
-    expect(click.mock.calls).toHaveLength(0)
-  })
+    expect(click.mock.calls).toHaveLength(0);
+  });
 });

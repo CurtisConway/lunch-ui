@@ -8,7 +8,6 @@ button {
   background:none;
   padding:0;
   display:block;
-  width:100%
 }
 
 .lu-button {
@@ -24,6 +23,7 @@ button {
   border:2px solid transparent;
   border-radius:$defaultRadius;
   user-select: none;
+  width:100%;
 
   &.small {
     max-width:150px;
@@ -34,7 +34,7 @@ button {
   }
 
   &.fluid {
-    width:100%;
+    max-width:100%;
   }
 
   &.disabled {
