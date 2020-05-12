@@ -1,3 +1,63 @@
+///////////////////////////
+// GRID
+///////////////////////////
+
+$breakpoints: (
+  640px,
+  1024px,
+  1200px,
+  1840px,
+);
+
+@mixin small {
+  @media screen and (min-width: #{nth($breakpoints, 1)}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{nth($breakpoints, 2)}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: #{nth($breakpoints, 3)}) {
+    @content;
+  }
+}
+
+@mixin xLarge {
+  @media screen and (min-width: #{nth($breakpoints, 4)}) {
+    @content;
+  }
+}
+
+@mixin createGridStyles($modifier) {
+  @for $i from 1 through 12 {
+    .#{$modifier}-#{$i} {
+      flex: 0 0 #{$i / 12 * 100%};
+      max-width:#{$i / 12 * 100%};
+      min-width:#{$i / 12 * 100%};
+    }
+  }
+}
+
+@include createGridStyles(xs);
+
+@include small {
+  @include createGridStyles(sm)
+}
+@include medium {
+  @include createGridStyles(md)
+}
+@include large {
+  @include createGridStyles(lg)
+}
+@include xLarge {
+  @include createGridStyles(xl)
+}
+
 //////////////////////
 // COLORS
 //////////////////////
