@@ -1,0 +1,77 @@
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+.flex {
+  display:flex;
+}
+
+.flex-row {
+  flex-direction:row;
+  align-items:stretch;
+  justify-content:flex-start;
+
+  &.flex-reverse {
+    flex-direction:row-reverse;
+  }
+
+  &.align-h-right {
+    justify-content:flex-end;
+  }
+
+  &.align-h-left {
+    justify-content:flex-start;
+  }
+
+  &.align-h-center {
+    justify-content:center;
+  }
+
+  &.align-v-top {
+    align-items:end;
+  }
+
+  &.align-v-bottom {
+    align-items:start;
+  }
+
+  &.align-v-center {
+    align-items:center;
+  }
+}
+
+.flex-column {
+  flex-direction:column;
+  flex:1 1 100%;
+
+  &.flex-reverse {
+    flex-direction:column-reverse;
+  }
+
+  &.align-h-right {
+    align-items:end;
+  }
+
+  &.align-h-left {
+    align-items:start;
+  }
+
+  &.align-h-center {
+    align-items:center;
+  }
+
+  &.align-v-bottom {
+    justify-content:flex-end;
+  }
+
+  &.align-v-top {
+    justify-content:flex-start;
+  }
+
+  &.align-v-center {
+    justify-content:center;
+  }
+}
+
+.flex-wrap {
+  flex-wrap:wrap;
+}
