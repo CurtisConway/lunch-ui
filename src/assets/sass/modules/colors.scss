@@ -1,13 +1,15 @@
 @import '../_variables.scss';
 
+// TODO FIX SPECIFICITY TO AVOID USING IMPORTANT
 @each $key, $value in $colors {
   .bg-#{$key} {
-    background-color: $value;
+    background-color: $value!important;
   }
   .text-#{$key} {
-    color: $value;
+    color: $value!important;
   }
   .border-#{$key} {
-    border-color: $value;
+    border-color: $value!important;
   }
 }
+// TODO FIX SPECIFICITY TO AVOID USING IMPORTANT

@@ -1,9 +1,11 @@
 <template>
   <component
+    ref="wrapper"
     :is="getTagName"
     :to="to || $attrs.href"
     :class="defaultClassList"
     :style="defaultStyleList"
+    :disabled="disabled"
   >
     <slot></slot>
   </component>
@@ -12,10 +14,11 @@
 <script>
 import './LuButton.scss';
 import colors from '../../assets/js/mixins/colors';
+import event from '../../assets/js/mixins/event';
 
 export default {
   name: 'LuButton',
-  mixins: [colors],
+  mixins: [colors, event],
   inheritAttrs: true,
   props: {
     to: {
@@ -34,6 +37,13 @@ export default {
       type: String,
       default: () => 'solid',
     },
+    disabled: {
+      type: Boolean,
+      default: () => false,
+    },
+  },
+  mounted() {
+    this.$el.addEventListener('click', this.emitEvent);
   },
   computed: {
     getTagName() {
@@ -50,6 +60,7 @@ export default {
         large: this.size === 'large',
         small: this.size === 'small',
         fluid: !this.size,
+        disabled: this.disabled,
       });
       if (this.type === 'outline') {
         classes.push(this.textColor);

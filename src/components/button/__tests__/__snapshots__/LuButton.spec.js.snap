@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LuButton.vue should render an <a> tag when using href prop 1`] = `<a href="http://www.google.com" class="lu-button fluid bg-blue border-blue"></a>`;
+
+exports[`LuButton.vue should render an <a> tag when using to prop 1`] = `<a href="#/http://www.google.com" class="lu-button fluid bg-blue border-blue"></a>`;
+
 exports[`LuButton.vue should render component and match snapshot 1`] = `<button class="lu-button fluid bg-blue border-blue"></button>`;
 
 exports[`LuButton.vue should render component with a color prop and match snapshot 1`] = `<button class="lu-button fluid bg-green border-green"></button>`;

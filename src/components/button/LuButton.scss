@@ -4,11 +4,11 @@
 button {
   appearance:none;
   box-shadow:none;
-  border:none;
   outline:none;
   background:none;
   padding:0;
   display:block;
+  width:100%
 }
 
 .lu-button {
@@ -23,6 +23,7 @@ button {
   min-height:$defaultInputHeight;
   border:2px solid transparent;
   border-radius:$defaultRadius;
+  user-select: none;
 
   &.small {
     max-width:150px;
@@ -34,6 +35,11 @@ button {
 
   &.fluid {
     width:100%;
+  }
+
+  &.disabled {
+    opacity:0.7;
+    pointer-events:none;
   }
 }
 
