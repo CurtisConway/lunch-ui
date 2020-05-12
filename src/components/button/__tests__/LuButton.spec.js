@@ -30,5 +30,48 @@ describe('LuButton.vue', () => {
 
   it('should render component and match snapshot', () => {
     expect(mountFunction().html()).toMatchSnapshot()
-  })
+  });
+
+  it('should render component with a type prop and match snapshot', () => {
+    expect(mountFunction({
+      propsData: {
+        type: 'solid',
+      },
+    }).html()).toMatchSnapshot()
+
+    expect(mountFunction({
+      propsData: {
+        type: 'text',
+      },
+    }).html()).toMatchSnapshot()
+
+    expect(mountFunction({
+      propsData: {
+        type: 'outline',
+      },
+    }).html()).toMatchSnapshot()
+  });
+
+  it('should render component with a color prop and match snapshot', () => {
+    expect(mountFunction({
+      propsData: {
+        type: 'solid',
+        color: 'green',
+      },
+    }).html()).toMatchSnapshot()
+
+    expect(mountFunction({
+      propsData: {
+        color: 'green',
+        type: 'text',
+      },
+    }).html()).toMatchSnapshot()
+
+    expect(mountFunction({
+      propsData: {
+        color: 'green',
+        type: 'outline',
+      },
+    }).html()).toMatchSnapshot()
+  });
 });

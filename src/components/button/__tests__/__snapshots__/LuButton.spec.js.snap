@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LuButton.vue should render component and match snapshot 1`] = `<button class="lu-button fluid"></button>`;
+exports[`LuButton.vue should render component and match snapshot 1`] = `<button class="lu-button fluid bg-blue border-blue"></button>`;
+
+exports[`LuButton.vue should render component with a color prop and match snapshot 1`] = `<button class="lu-button fluid bg-green border-green"></button>`;
+
+exports[`LuButton.vue should render component with a color prop and match snapshot 2`] = `<button class="lu-button fluid text-green"></button>`;
+
+exports[`LuButton.vue should render component with a color prop and match snapshot 3`] = `<button class="lu-button fluid text-green border-green"></button>`;
+
+exports[`LuButton.vue should render component with a type prop and match snapshot 1`] = `<button class="lu-button fluid bg-blue border-blue"></button>`;
+
+exports[`LuButton.vue should render component with a type prop and match snapshot 2`] = `<button class="lu-button fluid text-blue"></button>`;
+
+exports[`LuButton.vue should render component with a type prop and match snapshot 3`] = `<button class="lu-button fluid text-blue border-blue"></button>`;

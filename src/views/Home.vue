@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
 
-    <LuButton to="about">
+    <LuButton to="about" color="green" type="solid" :size="542">
       Test
     </LuButton>
   </div>
