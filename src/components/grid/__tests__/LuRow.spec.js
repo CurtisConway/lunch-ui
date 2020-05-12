@@ -9,7 +9,7 @@ import {
 } from '@vue/test-utils';
 import { compileToFunctions } from 'vue-template-compiler'
 
-describe('LuButton.vue', () => {
+describe('LuRow.vue', () => {
   let mountFunction;
   let router = Router;
   let localVue = typeof Vue;
