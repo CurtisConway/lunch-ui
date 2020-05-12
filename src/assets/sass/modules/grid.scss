@@ -75,3 +75,18 @@
 .flex-wrap {
   flex-wrap:wrap;
 }
+
+@include createGridStyles(xs);
+
+@include small {
+  @include createGridStyles(sm)
+}
+@include medium {
+  @include createGridStyles(md)
+}
+@include large {
+  @include createGridStyles(lg)
+}
+@include xLarge {
+  @include createGridStyles(xl)
+}
