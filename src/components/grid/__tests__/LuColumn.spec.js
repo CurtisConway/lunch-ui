@@ -155,4 +155,35 @@ describe('LuColumn.vue', () => {
     expect(center.classes('align-v-center')).toBe(true);
     expect(bottom.classes('align-v-bottom')).toBe(true);
   });
+
+  it('should have the right column size classes', async () => {
+    const wrapper = mountFunction({
+      propsData: {
+        columnSizes: {
+          xs: 12,
+          sm: 10,
+          md: 8,
+          lg: 6,
+          xl: 4,
+        },
+      },
+    });
+
+    expect(wrapper.classes('xs-12')).toBe(true);
+    expect(wrapper.classes('sm-10')).toBe(true);
+    expect(wrapper.classes('md-8')).toBe(true);
+    expect(wrapper.classes('lg-6')).toBe(true);
+    expect(wrapper.classes('xl-4')).toBe(true);
+  });
+
+  it('should have the right column width style with a string', async () => {
+    const wrapper = mountFunction({
+      propsData: {
+        columnWidths: '100%',
+      },
+    });
+
+    expect(wrapper.attributes().style)
+      .toBe('flex: 0 0 100%; max-width: 100%; min-width: 100%;');
+  });
 });

@@ -9,8 +9,11 @@
 </template>
 
 <script>
+import responsive from '../../assets/js/mixins/responsive';
+
 export default {
   name: 'LuColumn',
+  mixins: [responsive],
   props: {
     tag: {
       type: String,
@@ -98,7 +101,7 @@ export default {
         .filter((key) => this.columnWidths[key] != null);
       let width;
       if (widths.length > 0) {
-        width = this.columnWidths[this.$root.currentBreakpoint];
+        width = this.columnWidths[this.currentBreakpoint];
         if (width) {
           return {
             flex: `0 0 ${width}`,
@@ -106,7 +109,7 @@ export default {
             'min-width': width,
           };
         }
-        return this.findPreviousWidth(this.$root.currentBreakpoint);
+        return this.findPreviousWidth(this.currentBreakpoint);
       }
       return {};
     },
@@ -116,7 +119,7 @@ export default {
       const breakpoints = ['xs', 'sm', 'md', 'lg', 'xl'];
       const predecessor = breakpoints.indexOf(breakpoint) - 1;
 
-      if (predecessor != null) {
+      if (breakpoints[predecessor] != null) {
         const width = this.columnWidths[breakpoints[predecessor]];
         if (width) {
           return {
