@@ -9,40 +9,6 @@ $breakpoints: (
   1840px,
 );
 
-@mixin small {
-  @media screen and (min-width: #{nth($breakpoints, 1)}) {
-    @content;
-  }
-}
-
-@mixin medium {
-  @media screen and (min-width: #{nth($breakpoints, 2)}) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media screen and (min-width: #{nth($breakpoints, 3)}) {
-    @content;
-  }
-}
-
-@mixin xLarge {
-  @media screen and (min-width: #{nth($breakpoints, 4)}) {
-    @content;
-  }
-}
-
-@mixin createGridStyles($modifier) {
-  @for $i from 1 through 12 {
-    .#{$modifier}-#{$i} {
-      flex: 0 0 #{$i / 12 * 100%};
-      max-width:#{$i / 12 * 100%};
-      min-width:#{$i / 12 * 100%};
-    }
-  }
-}
-
 //////////////////////
 // COLORS
 //////////////////////
@@ -94,11 +60,17 @@ $colors: (
 // TYPOGRAPHY
 //////////////////////
 
-$base: 16px;
-$subheading: 1.5em;
-$heading: 2em;
-$display: 3em;
-
+$baseFontSize: 16px;
+$fontSizes: (
+  tiny: 10px,
+  caption: 13px,
+  body: $baseFontSize,
+  subtitle: 20px,
+  title: 24px,
+  subheading: 28px,
+  heading: 32px,
+  display: 48px,
+);
 $defaultFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 ///////////////////////////
