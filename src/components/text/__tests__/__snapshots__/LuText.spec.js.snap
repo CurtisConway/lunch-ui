@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuButton.vue should render component and match snapshot 1`] = `<p class="lu-text text-blue"></p>`;
+
+exports[`LuButton.vue should render component with a color prop and match snapshot 1`] = `<p class="lu-text text-green"></p>`;
+
+exports[`LuButton.vue should render component with a tag prop and match snapshot 1`] = `<h2 class="lu-text text-blue"></h2>`;
+
+exports[`LuButton.vue should render component with a transform prop and match snapshot 1`] = `<p class="lu-text text-blue text-uppercase"></p>`;
