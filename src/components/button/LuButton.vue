@@ -23,7 +23,7 @@ export default {
   inheritAttrs: true,
   props: {
     to: {
-      type: [String, Location],
+      type: [String, Object],
       default: () => undefined,
     },
     size: {
