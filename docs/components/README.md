@@ -1,5 +1,41 @@
 # Components
 
+## Text
+
+<LuText size="display">Display</LuText>
+<LuText size="heading">Heading</LuText>
+<LuText size="subheading">SubHeading</LuText>
+<LuText size="title">Title</LuText>
+<LuText size="subtitle">SubTitle</LuText>
+<LuText>Body</LuText>
+<LuText size="caption">Caption</LuText>
+<LuText size="tiny">Tiny</LuText>
+<LuText :size="25">25 Pixels</LuText>
+
+```vue
+<LuText size="display">Display</LuText>
+<LuText size="heading">Heading</LuText>
+<LuText size="subheading">SubHeading</LuText>
+<LuText size="title">Title</LuText>
+<LuText size="subtitle">SubTitle</LuText>
+<LuText>Body</LuText>
+<LuText size="caption">Caption</LuText>
+<LuText size="tiny">Tiny</LuText>
+<LuText :size="25">25 Pixels</LuText>
+```
+
+<h3>Props</h3>
+
+| Prop             | Type     | Default      | Description
+|------------------|----------|--------------|---------------
+| `tag`            | String   | `p`          | Determines the HTML tag to render
+| `transform`      | String   | `undefined`  | Determines the text transform - `uppercase` or `capitalize`
+| `size`           | String, Number   | `body`      | Determines the font size of the text. Can be one of the default styles or a number representing the width
+| `color`          | String           | `black`     | Determines the text color based off of the preset list of color strings
+| `bold`           | Boolean          | `false`     | Bolds the text
+| `italic`         | Boolean          | `false`     | Italicises the text
+| `underline`      | Boolean          | `false`     | Underlines the text
+
 ## Grid
 
 The grid is a simple flex grid utilising rows and columns, as well as a 12-point grid system with manual overrides -
@@ -164,15 +200,15 @@ resulting in simple, effective, efficient, and scalable responsive components.
 
 <ClientOnly>
 <LuRow>
-<LuColumn style="padding:10px;">
+<LuColumn pa="2">
 <LuButton>LetUs</LuButton>
 </LuColumn>
 
-<LuColumn style="padding:10px;">
+<LuColumn pa="2">
 <LuButton type="outline">UI</LuButton>
 </LuColumn>
 
-<LuColumn style="padding:10px;">
+<LuColumn pa="2">
 <LuButton type="text">Rocks!</LuButton>
 </LuColumn>
 </LuRow>
@@ -180,15 +216,15 @@ resulting in simple, effective, efficient, and scalable responsive components.
 
 ```vue
 <LuRow>
-    <LuColumn style="padding:10px;">
+    <LuColumn  pa="2">
         <LuButton>LetUs</LuButton>
     </LuColumn>
     
-    <LuColumn style="padding:10px;">
+    <LuColumn  pa="2">
         <LuButton type="outline">UI</LuButton>
     </LuColumn>
 
-    <LuColumn style="padding:10px;">
+    <LuColumn  pa="2">
         <LuButton type="text">Rocks!</LuButton>
     </LuColumn>
 </LuRow>
@@ -203,3 +239,4 @@ resulting in simple, effective, efficient, and scalable responsive components.
 | `color`          | String           | `'blue'`    | Determines the theme color of the button based off of the preset list of color strings
 | `type`           | String           | `'solid'`   | Determines the type of button, can either be `solid`, `outline`, or `text`
 | `disabled`       | Boolean          | `false`     | Disables any click events on the button and reduces it's opacity
+
