@@ -21,7 +21,7 @@ export default {
     },
     wrap: {
       type: Boolean,
-      default: () => false,
+      default: () => true,
     },
     vAlign: {
       type: String,
