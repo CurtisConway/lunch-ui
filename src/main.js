@@ -3,7 +3,6 @@ import App from './App.vue';
 import router from './router';
 import LetusUI from '../dist/letus-ui.umd.min';
 import './assets/sass/app.scss';
-import '../dist/letus-ui.css';
 
 Vue.config.productionTip = false;
 

@@ -43,7 +43,15 @@
     </LuRow>
     <LuRow>
       <LuColumn>
-        <LuText>This is a test text</LuText>
+        <LuText
+          tag="p"
+          color="deep-purple"
+          transform="capitalize"
+          mv="5"
+          ph="2"
+        >
+          This is a test text
+        </LuText>
       </LuColumn>
     </LuRow>
   </div>
