@@ -5,12 +5,12 @@
   "main": "./dist/letus-ui.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "update-snapshots": "npm run test:unit -- -u",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "lib:watch": "vue-cli-service build --watch --target lib --name letus-ui --mode dev ./index.js",
     "lib:build": "vue-cli-service build --target lib --name letus-ui ./index.js"
   },
   "dependencies": {

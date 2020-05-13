@@ -5,19 +5,29 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads a sandbox environment for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies the library for production
 ```
-npm run build
+npm run lib:build
 ```
 
-### Run your tests
+### Compiles and minifies the library for development - Useful for developing with symlinks
 ```
-npm run test
+npm run lib:watch
+```
+
+### Compiles and hot-reloads the documentation site
+```
+npm run docs:dev
+```
+
+### Compiles and minifies the documentation for production deployment
+```
+npm run docs:build
 ```
 
 ### Lints and fixes files
@@ -25,10 +35,12 @@ npm run test
 npm run lint
 ```
 
-### Run your unit tests
+### Runs all unit and snapshot tests
 ```
 npm run test:unit
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Updates all current component snapshots - To be used after a change is confirmed with a component
+```
+npm run update-snapshots
+```
