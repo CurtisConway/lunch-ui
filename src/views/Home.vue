@@ -37,6 +37,7 @@
           color="green"
           type="outline"
           disabled
+          short
         >
           Test Text
         </LuButton>

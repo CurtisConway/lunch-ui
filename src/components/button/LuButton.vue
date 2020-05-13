@@ -38,6 +38,10 @@ export default {
       type: String,
       default: () => 'solid',
     },
+    short: {
+      type: Boolean,
+      default: () => false,
+    },
     disabled: {
       type: Boolean,
       default: () => false,
@@ -65,6 +69,7 @@ export default {
           small: this.size === 'small',
           fluid: !this.size,
           disabled: this.disabled,
+          short: this.short,
         },
       ];
     },

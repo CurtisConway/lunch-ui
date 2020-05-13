@@ -106,6 +106,16 @@ describe('LuButton.vue', () => {
     expect(wrapper.classes('text-green')).toBe(true);
   });
 
+  it('should have the short class when using the short prop', () => {
+    const wrapper = mountFunction({
+      propsData: {
+        short: true,
+      },
+    });
+
+    expect(wrapper.classes('short')).toBe(true);
+  });
+
   it('should have text color class and border color class when using the outline style', () => {
     const wrapper = mountFunction({
       propsData: {
