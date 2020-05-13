@@ -1,0 +1,24 @@
+@import '../../assets/sass/_variables';
+@import '../../assets/sass/_mixins';
+
+.lu-text {
+  padding:0;
+  margin:0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    -webkit-font-smoothing:subpixel-antialiased;
+  }
+}
+
+.text-uppercase {
+  text-transform:uppercase;
+}
+
+.text-capitalize {
+  text-transform:capitalize;
+}
