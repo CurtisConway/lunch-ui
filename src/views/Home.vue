@@ -50,6 +50,9 @@
           transform="capitalize"
           mv="5"
           ph="2"
+          :size="20"
+          underline
+          italic
         >
           This is a test text
         </LuText>

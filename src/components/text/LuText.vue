@@ -1,5 +1,9 @@
 <template>
-  <component :is="tag" :class="defaultClassList">
+  <component
+    :is="tag"
+    :class="defaultClassList"
+    :style="defaultStyleList"
+  >
     <slot></slot>
   </component>
 </template>
@@ -21,6 +25,26 @@ export default {
       type: String,
       default: () => undefined,
     },
+    size: {
+      type: [String, Number],
+      default: () => 'body',
+    },
+    color: {
+      type: String,
+      default: () => 'black',
+    },
+    bold: {
+      type: Boolean,
+      default: () => false,
+    },
+    italic: {
+      type: Boolean,
+      default: () => false,
+    },
+    underline: {
+      type: Boolean,
+      default: () => false,
+    },
   },
   computed: {
     defaultClassList() {
@@ -30,6 +54,17 @@ export default {
         this.textTransformClass,
         this.marginClasses,
         this.paddingClasses,
+        this.textSizeClass,
+        {
+          'text-bold': this.bold,
+          'text-italic': this.italic,
+          'text-underline': this.underline,
+        },
+      ];
+    },
+    defaultStyleList() {
+      return [
+        this.textSizeStyle,
       ];
     },
     textTransformClass() {
@@ -38,6 +73,18 @@ export default {
         capitalize: 'text-capitalize',
       };
       return transforms[this.transform] || '';
+    },
+    textSizeClass() {
+      if (typeof this.size === 'number') {
+        return false;
+      }
+      return `text-${this.size}`;
+    },
+    textSizeStyle() {
+      if (typeof this.size !== 'number') {
+        return false;
+      }
+      return { 'font-size': `${this.size}px` };
     },
   },
 };

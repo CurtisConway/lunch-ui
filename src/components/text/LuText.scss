@@ -7,18 +7,38 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size:$baseFontSize;
+  font-weight:400;
 
   @media
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi) {
     -webkit-font-smoothing:subpixel-antialiased;
   }
-}
 
-.text-uppercase {
-  text-transform:uppercase;
-}
+  @each $key, $value in $fontSizes {
+    &.text-#{$key} {
+      font-size: $value;
+    }
+  }
 
-.text-capitalize {
-  text-transform:capitalize;
+  &.text-uppercase {
+    text-transform:uppercase;
+  }
+
+  &.text-capitalize {
+    text-transform:capitalize;
+  }
+
+  &.text-bold {
+    font-weight:700;
+  }
+
+  &.text-italic {
+    font-style:italic;
+  }
+
+  &.text-underline {
+    text-decoration:underline;
+  }
 }
