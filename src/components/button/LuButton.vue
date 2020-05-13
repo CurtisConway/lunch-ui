@@ -15,10 +15,11 @@
 import './LuButton.scss';
 import colors from '../../assets/js/mixins/colors';
 import event from '../../assets/js/mixins/event';
+import spacing from '../../assets/js/mixins/spacing';
 
 export default {
   name: 'LuButton',
-  mixins: [colors, event],
+  mixins: [colors, event, spacing],
   inheritAttrs: true,
   props: {
     to: {
@@ -54,14 +55,11 @@ export default {
       return 'button';
     },
     defaultClassList() {
-      const classes = [];
-      classes.push({
-        'lu-button': true,
-        large: this.size === 'large',
-        small: this.size === 'small',
-        fluid: !this.size,
-        disabled: this.disabled,
-      });
+      const classes = [
+        'lu-button',
+        this.marginClasses,
+        this.paddingClasses,
+      ];
       if (this.type === 'outline') {
         classes.push(this.textColor);
         classes.push(this.borderColor);
@@ -71,6 +69,12 @@ export default {
         classes.push(this.bgColor);
         classes.push(this.borderColor);
       }
+      classes.push({
+        large: this.size === 'large',
+        small: this.size === 'small',
+        fluid: !this.size,
+        disabled: this.disabled,
+      });
       return classes;
     },
     defaultStyleList() {

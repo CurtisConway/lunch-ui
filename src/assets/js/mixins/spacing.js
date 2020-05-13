@@ -4,7 +4,7 @@ export default {
     'pa', 'pv', 'pt', 'pb', 'ph', 'pl', 'pr',
   ],
   computed: {
-    marginClass() {
+    marginClasses() {
       const classes = [];
       Object.keys(this.$props)
         .filter((key) => key.length <= 2 && key.includes('m'))
@@ -15,7 +15,7 @@ export default {
         });
       return classes;
     },
-    paddingClass() {
+    paddingClasses() {
       const classes = [];
       Object.keys(this.$props)
         .filter((key) => key.length <= 2 && key.includes('p'))

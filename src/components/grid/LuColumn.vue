@@ -10,10 +10,11 @@
 
 <script>
 import responsive from '../../assets/js/mixins/responsive';
+import spacing from '../../assets/js/mixins/spacing';
 
 export default {
   name: 'LuColumn',
-  mixins: [responsive],
+  mixins: [responsive, spacing],
   props: {
     tag: {
       type: String,
@@ -68,6 +69,8 @@ export default {
         this.horizontalAlignmentClasses,
         this.verticalAlignmentClasses,
         this.columnSizeClasses,
+        this.marginClasses,
+        this.paddingClasses,
       ];
     },
     horizontalAlignmentClasses() {

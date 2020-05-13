@@ -28,8 +28,8 @@ export default {
         'lu-text',
         this.textColor,
         this.textTransformClass,
-        this.marginClass,
-        this.paddingClass,
+        this.marginClasses,
+        this.paddingClasses,
       ];
     },
     textTransformClass() {

@@ -8,8 +8,11 @@
 </template>
 
 <script>
+import spacing from '../../assets/js/mixins/spacing';
+
 export default {
   name: 'LuRow',
+  mixins: [spacing],
   props: {
     tag: {
       type: String,
@@ -43,6 +46,8 @@ export default {
         },
         this.horizontalAlignmentClasses,
         this.verticalAlignmentClasses,
+        this.marginClasses,
+        this.paddingClasses,
       ];
     },
     horizontalAlignmentClasses() {
