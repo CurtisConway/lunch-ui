@@ -104,7 +104,7 @@ describe('LuButton.vue', () => {
     });
 
     expect(wrapper.classes('text-green')).toBe(true);
-  })
+  });
 
   it('should have text color class and border color class when using the outline style', () => {
     const wrapper = mountFunction({
@@ -116,7 +116,7 @@ describe('LuButton.vue', () => {
 
     expect(wrapper.classes('text-green')).toBe(true);
     expect(wrapper.classes('border-green')).toBe(true);
-  })
+  });
 
   it('should have background color class and border color class when using the solid style', () => {
     const wrapper = mountFunction({
