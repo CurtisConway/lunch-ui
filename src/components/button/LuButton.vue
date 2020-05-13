@@ -55,11 +55,29 @@ export default {
       return 'button';
     },
     defaultClassList() {
-      const classes = [
+      return [
         'lu-button',
-        this.marginClasses,
-        this.paddingClasses,
+        ...this.marginClasses,
+        ...this.paddingClasses,
+        ...this.typeClasses,
+        {
+          large: this.size === 'large',
+          small: this.size === 'small',
+          fluid: !this.size,
+          disabled: this.disabled,
+        },
       ];
+    },
+    defaultStyleList() {
+      const styles = {};
+      if (typeof this.size === 'number') {
+        styles['max-width'] = `${this.size}px`;
+        styles.width = `${this.size}px`;
+      }
+      return styles;
+    },
+    typeClasses() {
+      const classes = [];
       if (this.type === 'outline') {
         classes.push(this.textColor);
         classes.push(this.borderColor);
@@ -69,21 +87,7 @@ export default {
         classes.push(this.bgColor);
         classes.push(this.borderColor);
       }
-      classes.push({
-        large: this.size === 'large',
-        small: this.size === 'small',
-        fluid: !this.size,
-        disabled: this.disabled,
-      });
       return classes;
-    },
-    defaultStyleList() {
-      const styles = {};
-      if (typeof this.size === 'number') {
-        styles['max-width'] = `${this.size}px`;
-        styles.width = `${this.size}px`;
-      }
-      return styles;
     },
   },
 };
