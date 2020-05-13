@@ -2,7 +2,7 @@ export default {
   props: {
     color: {
       type: String,
-      default: () => 'blue',
+      default: () => undefined,
     },
   },
   computed: {
