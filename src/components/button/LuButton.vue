@@ -28,7 +28,7 @@ export default {
     },
     size: {
       type: [String, Number],
-      default: () => '',
+      default: () => undefined,
     },
     color: {
       type: String,

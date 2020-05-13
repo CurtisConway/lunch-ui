@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LuRow.vue should render component and match snapshot 1`] = `<div class="flex flex-row align-h-left align-v-center"></div>`;
+exports[`LuRow.vue should render component and match snapshot 1`] = `<div class="flex flex-row flex-wrap align-h-left align-v-center"></div>`;
 
-exports[`LuRow.vue should render component with a hAlign prop and match snapshot 1`] = `<div class="flex flex-row align-h-left align-v-center"></div>`;
+exports[`LuRow.vue should render component with a hAlign prop and match snapshot 1`] = `<div class="flex flex-row flex-wrap align-h-left align-v-center"></div>`;
 
-exports[`LuRow.vue should render component with a reverse prop and match snapshot 1`] = `<div class="flex flex-row flex-reverse align-h-left align-v-center"></div>`;
+exports[`LuRow.vue should render component with a reverse prop and match snapshot 1`] = `<div class="flex flex-row flex-reverse flex-wrap align-h-left align-v-center"></div>`;
 
-exports[`LuRow.vue should render component with a tag prop and match snapshot 1`] = `<main class="flex flex-row align-h-left align-v-center"></main>`;
+exports[`LuRow.vue should render component with a tag prop and match snapshot 1`] = `<main class="flex flex-row flex-wrap align-h-left align-v-center"></main>`;
 
-exports[`LuRow.vue should render component with a vAlign prop and match snapshot 1`] = `<div class="flex flex-row align-h-left align-v-top"></div>`;
+exports[`LuRow.vue should render component with a vAlign prop and match snapshot 1`] = `<div class="flex flex-row flex-wrap align-h-left align-v-top"></div>`;
 
 exports[`LuRow.vue should render component with a wrap prop and match snapshot 1`] = `<div class="flex flex-row flex-wrap align-h-left align-v-center"></div>`;

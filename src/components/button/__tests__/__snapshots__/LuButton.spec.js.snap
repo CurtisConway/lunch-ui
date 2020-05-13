@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LuButton.vue should render an <a> tag when using href prop 1`] = `<a href="http://www.google.com" class="lu-button fluid bg-blue border-blue"></a>`;
+exports[`LuButton.vue should render an <a> tag when using href prop 1`] = `<a href="http://www.google.com" class="lu-button bg-blue border-blue fluid"></a>`;
 
-exports[`LuButton.vue should render an <a> tag when using to prop 1`] = `<a href="#/http://www.google.com" class="lu-button fluid bg-blue border-blue"></a>`;
+exports[`LuButton.vue should render an <a> tag when using to prop 1`] = `<a href="#/http://www.google.com" class="lu-button bg-blue border-blue fluid"></a>`;
 
-exports[`LuButton.vue should render component and match snapshot 1`] = `<button class="lu-button fluid bg-blue border-blue"></button>`;
+exports[`LuButton.vue should render component and match snapshot 1`] = `<button class="lu-button bg-blue border-blue fluid"></button>`;
 
-exports[`LuButton.vue should render component with a color prop and match snapshot 1`] = `<button class="lu-button fluid bg-green border-green"></button>`;
+exports[`LuButton.vue should render component with a color prop and match snapshot 1`] = `<button class="lu-button bg-green border-green fluid"></button>`;
 
-exports[`LuButton.vue should render component with a color prop and match snapshot 2`] = `<button class="lu-button fluid text-green"></button>`;
+exports[`LuButton.vue should render component with a color prop and match snapshot 2`] = `<button class="lu-button text-green fluid"></button>`;
 
-exports[`LuButton.vue should render component with a color prop and match snapshot 3`] = `<button class="lu-button fluid text-green border-green"></button>`;
+exports[`LuButton.vue should render component with a color prop and match snapshot 3`] = `<button class="lu-button text-green border-green fluid"></button>`;
 
-exports[`LuButton.vue should render component with a type prop and match snapshot 1`] = `<button class="lu-button fluid bg-blue border-blue"></button>`;
+exports[`LuButton.vue should render component with a type prop and match snapshot 1`] = `<button class="lu-button bg-blue border-blue fluid"></button>`;
 
-exports[`LuButton.vue should render component with a type prop and match snapshot 2`] = `<button class="lu-button fluid text-blue"></button>`;
+exports[`LuButton.vue should render component with a type prop and match snapshot 2`] = `<button class="lu-button text-blue fluid"></button>`;
 
-exports[`LuButton.vue should render component with a type prop and match snapshot 3`] = `<button class="lu-button fluid text-blue border-blue"></button>`;
+exports[`LuButton.vue should render component with a type prop and match snapshot 3`] = `<button class="lu-button text-blue border-blue fluid"></button>`;
