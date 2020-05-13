@@ -17,10 +17,8 @@
         }"
       >
         <LuButton
-          to="about"
           color="green"
           type="outline"
-          disabled
         >
           Test Text
         </LuButton>
@@ -43,20 +41,17 @@
         </LuButton>
       </LuColumn>
     </LuRow>
+    <LuRow>
+      <LuColumn>
+        <LuText>This is a test text</LuText>
+      </LuColumn>
+    </LuRow>
   </div>
 </template>
 
 <script>
-import LuButton from '../components/button/LuButton.vue';
-import LuRow from '../components/grid/LuRow.vue';
-import LuColumn from '../components/grid/LuColumn.vue';
 
 export default {
   name: 'Home',
-  components: {
-    LuButton,
-    LuRow,
-    LuColumn,
-  },
 };
 </script>
