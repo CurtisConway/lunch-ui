@@ -31,7 +31,7 @@ export default {
     },
     color: {
       type: String,
-      default: () => 'black',
+      default: () => undefined,
     },
     bold: {
       type: Boolean,

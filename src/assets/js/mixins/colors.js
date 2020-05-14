@@ -11,7 +11,10 @@ export default {
   },
   computed: {
     textColor() {
-      return `text-${this.color}`;
+      if (this.color) {
+        return `text-${this.color}`;
+      }
+      return false;
     },
     bgColorFromColor() {
       return `bg-${this.color}`;
