@@ -59,6 +59,42 @@
         </LuText>
       </LuColumn>
     </LuRow>
+    <LuRow>
+      <LuColumn pa="2" :columnWidths="{
+        xs: '100%',
+        md: '600px',
+      }">
+        <LuCard
+          pa="5"
+          borderRadius="1"
+          bgColor="black"
+        >
+          <LuText tag="h2" size="heading" color="white">
+            This is a Card
+          </LuText>
+        </LuCard>
+      </LuColumn>
+      <LuColumn pa="2">
+        <LuCard
+          pa="5"
+          borderRadius="1"
+        >
+          <LuText tag="h2" size="heading">
+            This is a Card
+          </LuText>
+        </LuCard>
+      </LuColumn>
+      <LuColumn pa="2">
+        <LuCard
+          pa="5"
+          borderRadius="1"
+        >
+          <LuText tag="h2" size="heading">
+            This is a Card
+          </LuText>
+        </LuCard>
+      </LuColumn>
+    </LuRow>
   </div>
 </template>
 
