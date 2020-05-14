@@ -11,10 +11,11 @@
 <script>
 import responsive from '../../assets/js/mixins/responsive';
 import spacing from '../../assets/js/mixins/spacing';
+import colors from '../../assets/js/mixins/colors';
 
 export default {
   name: 'LuColumn',
-  mixins: [responsive, spacing],
+  mixins: [responsive, spacing, colors],
   props: {
     tag: {
       type: String,
@@ -30,11 +31,11 @@ export default {
     },
     vAlign: {
       type: String,
-      default: () => 'center',
+      default: () => undefined,
     },
     hAlign: {
       type: String,
-      default: () => 'left',
+      default: () => undefined,
     },
     columnSizes: {
       type: Object,
@@ -71,6 +72,7 @@ export default {
         this.columnSizeClasses,
         this.marginClasses,
         this.paddingClasses,
+        this.bgColorClass,
       ];
     },
     horizontalAlignmentClasses() {
@@ -78,6 +80,7 @@ export default {
         'align-h-left': this.hAlign === 'left',
         'align-h-center': this.hAlign === 'center',
         'align-h-right': this.hAlign === 'right',
+        'align-h-stretch': this.hAlign === 'stretch',
       };
     },
     verticalAlignmentClasses() {

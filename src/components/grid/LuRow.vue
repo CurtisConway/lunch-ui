@@ -9,10 +9,11 @@
 
 <script>
 import spacing from '../../assets/js/mixins/spacing';
+import colors from '../../assets/js/mixins/colors';
 
 export default {
   name: 'LuRow',
-  mixins: [spacing],
+  mixins: [spacing, colors],
   props: {
     tag: {
       type: String,
@@ -28,11 +29,11 @@ export default {
     },
     vAlign: {
       type: String,
-      default: () => 'center',
+      default: () => undefined,
     },
     hAlign: {
       type: String,
-      default: () => 'left',
+      default: () => undefined,
     },
   },
   computed: {
@@ -48,6 +49,7 @@ export default {
         this.verticalAlignmentClasses,
         this.marginClasses,
         this.paddingClasses,
+        this.bgColorClass,
       ];
     },
     horizontalAlignmentClasses() {

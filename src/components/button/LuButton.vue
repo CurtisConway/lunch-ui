@@ -85,12 +85,12 @@ export default {
       const classes = [];
       if (this.type === 'outline') {
         classes.push(this.textColor);
-        classes.push(this.borderColor);
+        classes.push(this.borderColorFromColor);
       } else if (this.type === 'text') {
         classes.push(this.textColor);
       } else {
-        classes.push(this.bgColor);
-        classes.push(this.borderColor);
+        classes.push(this.bgColorFromColor);
+        classes.push(this.borderColorFromColor);
       }
       return classes;
     },
