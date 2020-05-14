@@ -2,7 +2,7 @@
   "name": "letus-ui",
   "version": "0.1.0",
   "private": true,
-  "main": "./dist/letus-ui.umd.min.js",
+  "main": "./index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
