@@ -33,7 +33,7 @@ export default {
       default: () => 'solid',
     },
     borderRadius: {
-      type: Number,
+      type: [Number, String],
       default: () => undefined,
     },
     borderColor: {
