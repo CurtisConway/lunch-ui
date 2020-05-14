@@ -45,6 +45,10 @@ export default {
       type: Boolean,
       default: () => false,
     },
+    align: {
+      type: String,
+      default: () => 'left',
+    },
   },
   computed: {
     defaultClassList() {
@@ -55,6 +59,7 @@ export default {
         this.marginClasses,
         this.paddingClasses,
         this.textSizeClass,
+        this.textAlignClass,
         {
           'text-bold': this.bold,
           'text-italic': this.italic,
@@ -85,6 +90,13 @@ export default {
         return false;
       }
       return { 'font-size': `${this.size}px` };
+    },
+    textAlignClass() {
+      return {
+        left: 'text-left',
+        center: 'text-center',
+        right: 'text-right',
+      }[this.align];
     },
   },
 };
