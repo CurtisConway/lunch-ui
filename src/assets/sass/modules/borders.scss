@@ -1,0 +1,51 @@
+@import '../_variables.scss';
+@import '../_mixins.scss';
+
+@for $i from 1 through 5 {
+  .rad-#{$i} {
+    border-radius: $i * $defaultRadius;
+  }
+  $borderAmount: #{$i}px;
+
+  .ba-#{$i} {
+    border:$borderAmount;
+  }
+
+  .bv-#{$i} {
+    border-top:$borderAmount;
+    border-bottom:$borderAmount;
+  }
+
+  .bh-#{$i} {
+    border-left:$borderAmount;
+    border-right:$borderAmount;
+  }
+
+  .bt-#{$i} {
+    border-top:$borderAmount;
+  }
+
+  .bb-#{$i} {
+    border-bottom:$borderAmount;
+  }
+
+  .bl-#{$i} {
+    border-left:$borderAmount;
+  }
+
+  .br-#{$i} {
+    border-right:$borderAmount;
+  }
+}
+
+.b-solid {
+  border-style: solid;
+}
+
+.b-dashed {
+  border-style: dashed;
+}
+
+.b-dotted {
+  border-style: dotted;
+}
