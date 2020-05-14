@@ -1,5 +1,10 @@
 <template>
-  <LuColumn :tag="tag" :class="defaultClassList">
+  <LuColumn
+    :tag="tag"
+    :class="defaultClassList"
+    :vAlign="vAlign"
+    :hAlign="hAlign"
+  >
     <slot></slot>
   </LuColumn>
 </template>
@@ -25,6 +30,14 @@ export default {
     elevation: {
       type: [String, Number],
       default: () => 4,
+    },
+    vAlign: {
+      type: String,
+      default: () => undefined,
+    },
+    hAlign: {
+      type: String,
+      default: () => undefined,
     },
   },
   computed: {
