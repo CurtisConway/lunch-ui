@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuDialog.vue should render component and match snapshot 1`] = `
+<div role="dialog" aria-modal="true" class="lu-dialog">
+  <div class="dialog-foreground flex flex-row flex-wrap">
+    <div class="flex flex-column lu-card elevation-4 rad-2 bg-white" style="display: none;"></div>
+  </div> <span class="dialog-background"></span>
+</div>
+`;

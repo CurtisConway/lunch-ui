@@ -1,0 +1,54 @@
+@import '../../assets/sass/_variables';
+@import '../../assets/sass/_mixins';
+
+.lu-dialog {
+  display: none;
+  position:fixed;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:100;
+
+   &.dialog-active {
+     display: flex;
+   }
+
+  .dialog-foreground {
+    position:relative;
+    width:95%;
+    max-width:95%;
+    min-height:300px;
+    z-index:2;
+
+    @include small {
+      max-width: 640px;
+    }
+
+    @include medium {
+      max-width: 960px;
+    }
+
+    @include large {
+      max-width:1200px;
+    }
+
+    @include xLarge {
+      max-width:1640px;
+    }
+  }
+
+  .dialog-background {
+    position:absolute;
+    cursor:pointer;
+    background-color:rgba(0,0,0,.3);
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:1;
+  }
+}

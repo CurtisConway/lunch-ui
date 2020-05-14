@@ -3,9 +3,11 @@
 @import './modules/spacing';
 @import './modules/elevation';
 @import './modules/borders';
+@import './modules/transitions';
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  position:relative;
 }
 
 html, body {

@@ -1,0 +1,59 @@
+// Slide Left Fade
+.slide-left-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-left-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-left-fade-enter, .slide-left-fade-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+// Slide Right Fade
+.slide-right-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-right-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-right-fade-enter, .slide-right-fade-leave-to {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+// Slide Down Fade
+.slide-down-fade-enter-active {
+  transition: all .2s ease;
+}
+.slide-down-fade-leave-active {
+  transition: all .2s ease-in-out;
+}
+.slide-down-fade-enter, .slide-down-fade-leave-to {
+  transform: translateY(-30px);
+  opacity: 0;
+}
+
+// Slide Up Fade
+.slide-up-fade-enter-active {
+  transition: all .2s ease;
+}
+.slide-up-fade-leave-active {
+  transition: all .2s ease-in-out;
+}
+.slide-up-fade-enter, .slide-up-fade-leave-to {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+// Grow Fade
+.grow-fade-enter-active {
+  transition: all .2s ease;
+}
+.grow-fade-leave-active {
+  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.grow-fade-enter, .grow-fade-leave-to {
+  transform: scale(.9);
+  opacity: 0;
+}

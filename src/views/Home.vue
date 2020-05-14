@@ -1,37 +1,27 @@
 <template>
-  <div class="home">
+  <div class="home" style="position:relative;">
     <img alt="Vue logo" src="../assets/logo.png">
-
+    <LuDialog v-model="dialog">
+      <LuText tag="h2" size="heading">Hello</LuText>
+    </LuDialog>
     <LuRow
       tag="main"
       vAlign="center"
       hAlign="left"
       :wrap="true"
     >
-      <LuColumn
-        tag="section"
-        :columnWidths="{
-          xs: '100%',
-          md: '50%',
-          lg: '30%',
-        }"
-      >
+      <LuColumn pa="5" tag="section">
         <LuButton
           color="green"
           type="outline"
           mv="5"
+          @click="dialog = !dialog"
         >
           Test Text
         </LuButton>
       </LuColumn>
-      <LuColumn
-        tag="section"
-        :columnWidths="{
-          xs: '30%',
-          md: '50%',
-          lg: '100%',
-        }"
-      >
+
+      <LuColumn pa="5">
         <LuButton
           to="about"
           color="green"
@@ -102,5 +92,10 @@
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      dialog: false,
+    };
+  },
 };
 </script>
