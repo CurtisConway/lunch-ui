@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuCard.vue should render component and match snapshot 1`] = `<div class="lu-card"></div>`;
