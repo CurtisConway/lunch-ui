@@ -47,6 +47,10 @@
     flex-direction:column-reverse;
   }
 
+  &.align-h-stretch {
+    align-items:stretch;
+  }
+
   &.align-h-right {
     align-items:end;
   }
