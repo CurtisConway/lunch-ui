@@ -1,6 +1,7 @@
 module.exports = {
   title: 'LunchUI',
   description: 'A custom Vue component library',
+  base: '/lunch-ui/',
   evergreen: true,
   themeConfig: {
     displayAllHeaders: true,
