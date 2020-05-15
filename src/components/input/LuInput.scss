@@ -10,7 +10,7 @@
   label {
     position:absolute;
     z-index:2;
-    top:30px;
+    top:27px;
     height:26px;
     width:100%;
     pointer-events:none;
@@ -22,7 +22,7 @@
     backface-visibility: hidden;
 
     &.focus {
-      transform: scale(0.75) translateY(-20px);
+      transform: scale(0.75) translateY(-16px);
     }
   }
   input[type='text'] {
