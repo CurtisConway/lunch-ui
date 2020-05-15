@@ -1,28 +1,15 @@
 language: node_js
 node_js:
-  - "10"
-env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+  - lts/*
 install:
-  - npm install -g vuepress
+  - yarn install # npm ci
 script:
-  - npm install; npm run docs:build
-cache:
-  directories:
-    - "node_modules"
-notifications:
-  email: false
+  - yarn docs:build # npm run docs:build
 deploy:
   provider: pages
-  skip-cleanup: true
+  skip_cleanup: true
   local_dir: docs/.vuepress/dist
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  repo: CurtisConway/lunch-ui
-  keep-history: true
-  target-branch: gh-pages
+  github_token: $GITHUB_TOKEN # A token generated on GitHub allowing Travis to push code on you repository. Set in the Travis settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: gh-pages
