@@ -14,7 +14,7 @@
 <script>
 import './LuButton.scss';
 import colors from '../../assets/js/mixins/colors';
-import event from '../../assets/js/mixins/event';
+import event from '../../assets/js/mixins/events';
 import spacing from '../../assets/js/mixins/spacing';
 
 export default {
