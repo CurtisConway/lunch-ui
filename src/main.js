@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import LetusUI from '../index';
+import LunchUI from '../index';
 import './assets/sass/app.scss';
 
 Vue.config.productionTip = false;
 
-Vue.use(LetusUI);
+Vue.use(LunchUI);
 
 new Vue({
   router,

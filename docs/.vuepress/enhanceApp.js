@@ -1,6 +1,5 @@
-import LetusUI from '../../dist/letus-ui.umd.min';
+import LunchUI from '../../index';
 import '../../src/assets/sass/app.scss';
-import '../../dist/letus-ui.css';
 
 export default ({
   Vue,
@@ -8,5 +7,5 @@ export default ({
   router,
   siteData
 }) => {
-  Vue.use(LetusUI)
+  Vue.use(LunchUI)
 }

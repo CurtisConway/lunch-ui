@@ -51,7 +51,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
     :wrap="true"
 >
 <h2 style="padding:5px;">
-    LetUs UI Rocks!
+    Lunch UI Rocks!
 </h2>
 </LuRow>
 </ClientOnly>
@@ -64,7 +64,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
     :wrap="true"
 >
     <h2>
-        LetUs UI!
+        Lunch UI!
     </h2>
 </LuRow>
 ```
@@ -103,7 +103,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
         xl: 4,
     }"
 >
-<h2>LetUs</h2>
+<h2>Lunch</h2>
 </LuColumn>
 <LuColumn 
     tag="div"
@@ -151,7 +151,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
             xl: 4,
         }"
     >
-        <h2>LetUs</h2>
+        <h2>Lunch</h2>
     </LuColumn>
     <LuColumn 
         tag="div"
@@ -201,7 +201,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
 <ClientOnly>
 <LuRow>
 <LuColumn pa="2">
-<LuButton>LetUs</LuButton>
+<LuButton>Lunch</LuButton>
 </LuColumn>
 
 <LuColumn pa="2">
@@ -217,7 +217,7 @@ resulting in simple, effective, efficient, and scalable responsive components.
 ```vue
 <LuRow>
     <LuColumn  pa="2">
-        <LuButton>LetUs</LuButton>
+        <LuButton>Lunch</LuButton>
     </LuColumn>
     
     <LuColumn  pa="2">

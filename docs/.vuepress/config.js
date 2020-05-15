@@ -1,6 +1,7 @@
 module.exports = {
-  title: 'LetusUI',
-  description: 'A custom Vue component library for the LetUs Tenant Experience',
+  title: 'LunchUI',
+  description: 'A custom Vue component library',
+  dest: 'docs/dist',
   evergreen: true,
   themeConfig: {
     displayAllHeaders: true,

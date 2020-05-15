@@ -1,5 +1,5 @@
 {
-  "name": "letus-ui",
+  "name": "lunch-ui",
   "version": "0.1.0",
   "private": true,
   "main": "./index.js",
@@ -10,8 +10,8 @@
     "update-snapshots": "npm run test:unit -- -u",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "lib:watch": "vue-cli-service build --watch --target lib --name letus-ui --mode dev ./index.js",
-    "lib:build": "vue-cli-service build --target lib --name letus-ui ./index.js"
+    "lib:watch": "vue-cli-service build --watch --target lib --name lunch-ui --mode dev ./index.js",
+    "lib:build": "vue-cli-service build --target lib --name lunch-ui ./index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",

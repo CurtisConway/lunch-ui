@@ -1,15 +1,15 @@
 # Usage Guide
 
-LetUs UI is a simple, opinionated, effective, efficient, and responsive component library.
+Lunch UI is a simple, opinionated, effective, efficient, and responsive component library.
 It's purpose is to create a seamless developer experience for building, managing, and 
-maintaining the Front-End UI of the LetUs platform.
+maintaining a Front-End UI.
 
 The main build is exposed as a Vue plugin, allowing us to leverage the `Vue.use()` method
 to load our code into the application.
 
 ## Installation
 
-LetUs UI isn't deployed to any package manager yet. However, you can still use 
+Lunch UI isn't deployed to any package manager yet. However, you can still use 
 NPM in conjunction with your repository URL to create a private package for consumption
 in your application.
 
@@ -17,7 +17,7 @@ In your package.json:
 ```json
 {
     "dependencies": {
-      "@letus/ui": "git+https://bitbucket.org/CurtConway/letus-ui.git"
+      "lunch-ui": "https://github.com/CurtisConway/lunch-ui.git"
     }
 }
 ```
@@ -28,9 +28,9 @@ manager.
 ## Usage
 
 ```js
-import LetUsUI from '@letus/ui';
+import LunchUI from 'lunch-ui';
 
-Vue.use(LetUsUI);
+Vue.use(LunchUI);
 
 new Vue({
     el: '#app',
