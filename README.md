@@ -1,4 +1,4 @@
-# letus-ui
+# lunch-ui
 
 ## Project setup
 ```
