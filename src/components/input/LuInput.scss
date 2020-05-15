@@ -1,0 +1,47 @@
+@import '../../assets/sass/_variables';
+@import '../../assets/sass/_mixins';
+
+.lu-form-group {
+  text-align:left;
+  border:2px solid transparent;
+  border-radius:$defaultRadius;
+  position:relative;
+
+  label {
+    position:absolute;
+    z-index:2;
+    top:30px;
+    height:26px;
+    width:100%;
+    pointer-events:none;
+    margin-left:$gutterWidth;
+    margin-top:-13px;
+    transform: scale(1) translateY(0);
+    transition: transform .2s;
+    transform-origin:0 0;
+    backface-visibility: hidden;
+
+    &.focus {
+      transform: scale(0.75) translateY(-20px);
+    }
+  }
+  input[type='text'] {
+    appearance:none;
+    outline:none;
+    background:none;
+    position:relative;
+    height:50px;
+    width:100%;
+    border:none;
+    z-index:1;
+    padding-left:$gutterWidth;
+    padding-top:15px;
+    font-size:map-get($fontSizes, 'subtitle');
+  }
+
+  .lu-error-list {
+    position:absolute;
+    bottom:100%;
+    left:-2px;
+  }
+}

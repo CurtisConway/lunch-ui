@@ -17,7 +17,7 @@
           mv="5"
           @click="dialog = !dialog"
         >
-          Test Text
+          Open Dialog
         </LuButton>
       </LuColumn>
 
@@ -31,6 +31,26 @@
         >
           Test Text
         </LuButton>
+      </LuColumn>
+    </LuRow>
+    <LuRow>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuTextInput
+          v-model="inputValue"
+          label="Test Label"
+          color="grey"
+          :errors="[
+            'Too many words',
+          ]"
+        />
+      </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuTextInput
+          v-model="inputValue2"
+          label="Test Label"
+          color="grey"
+          success
+        />
       </LuColumn>
     </LuRow>
     <LuRow>
@@ -90,11 +110,15 @@
 
 <script>
 
+import LuTextInput from "../components/input/LuTextInput";
 export default {
   name: 'Home',
+  components: {LuTextInput},
   data() {
     return {
       dialog: false,
+      inputValue: '',
+      inputValue2: '',
     };
   },
 };
