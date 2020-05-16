@@ -3,26 +3,50 @@
 
 .lu-form-group {
   text-align:left;
-  border:2px solid transparent;
-  border-radius:$defaultRadius;
   position:relative;
+
+  &.lu-input-outline {
+    border:2px solid transparent;
+    border-radius:$defaultRadius;
+  }
+
+  &.lu-input-underline {
+    border-top:2px solid transparent!important;
+    border-left:2px solid transparent!important;
+    border-right:2px solid transparent!important;
+    border-bottom:2px solid transparent;
+    border-radius:$defaultRadius $defaultRadius 0 0;
+
+    label {
+      margin-left:0;
+    }
+    input[type='text'] {
+      padding-left:0;
+    }
+  }
+
+  &.lu-input-solo {
+    border:2px solid transparent!important;
+    border-radius:$defaultRadius;
+  }
 
   label {
     position:absolute;
     z-index:2;
     top:27px;
     height:26px;
-    width:100%;
     pointer-events:none;
-    margin-left:$gutterWidth;
+    margin-left:$gutterWidth * 2;
     margin-top:-13px;
     transform: scale(1) translateY(0);
-    transition: transform .2s;
+    transition: transform .2s, background-color 0.15s;
     transform-origin:0 0;
     backface-visibility: hidden;
+    background-color:transparent;
 
-    &.focus {
-      transform: scale(0.75) translateY(-16px);
+    &.focus, &.persistent {
+      transform: scale(0.75) translateY(-30px);
+      background-color:#fff;
     }
   }
   input[type='text'] {
@@ -34,8 +58,7 @@
     width:100%;
     border:none;
     z-index:1;
-    padding-left:$gutterWidth;
-    padding-top:15px;
+    padding-left:$gutterWidth * 2;
     font-size:map-get($fontSizes, 'subtitle');
   }
 

@@ -4,13 +4,15 @@
       {{ label }}
     </LuText>
     <input
+      ref="inputElement"
       :type="inputType"
       v-model="valueInterface"
+      @change="onChange"
       @focus="onFocus"
       @blur="onBlur"
     >
     <transition name="grow-fade">
-      <LuErrorList :errors="errorList" v-show="errorState && focus"/>
+      <LuErrorList :errors="errorList" v-if="!isValid && focus"/>
     </transition>
   </div>
 </template>
@@ -23,10 +25,12 @@ import colors from '../../assets/js/mixins/colors';
 import borders from '../../assets/js/mixins/borders';
 import spacing from '../../assets/js/mixins/spacing';
 import events from '../../assets/js/mixins/events';
+import inputStyles from './_input-styles.mixin';
+import validation from './_validation.mixin';
 
 export default {
   name: 'LuTextInput',
-  mixins: [colors, borders, spacing, events],
+  mixins: [colors, borders, spacing, events, inputStyles, validation],
   components: {
     LuText,
     LuErrorList,
@@ -48,11 +52,7 @@ export default {
       type: String,
       default: () => 'black',
     },
-    errors: {
-      type: Array,
-      default: () => [],
-    },
-    success: {
+    persistentLabel: {
       type: Boolean,
       default: () => false,
     },
@@ -62,9 +62,6 @@ export default {
       changeTimeout: 0,
       tempValue: '',
       focus: false,
-      errorState: this.errors.length > 0,
-      errorList: this.errors,
-      successState: this.success,
     };
   },
   computed: {
@@ -75,7 +72,10 @@ export default {
       set(value) {
         clearTimeout(this.changeTimeout);
         this.tempValue = value;
-        this.changeTimeout = setTimeout(() => {
+        this.changeTimeout = setTimeout(async () => {
+          if (this.shouldValidate) {
+            await this.validateInput();
+          }
           this.$emit('input', value);
         }, 500);
       },
@@ -85,12 +85,12 @@ export default {
         'lu-form-group',
         this.paddingClasses,
         this.marginClasses,
-        this.borderClasses,
         this.colorClass,
+        this.inputStyleClasses,
       ];
     },
     colorClass() {
-      if (this.errorState) {
+      if (!this.isValid) {
         return ['text-red', 'border-red'];
       }
       if (this.successState) {
@@ -101,6 +101,7 @@ export default {
     labelClassList() {
       return {
         focus: this.focus || this.value.length > 0,
+        persistent: this.persistentLabel,
       };
     },
     inputType() {
@@ -115,12 +116,18 @@ export default {
       this.focus = true;
       this.emitEvent(event);
     },
-    onBlur(event) {
+    async onBlur(event) {
       this.focus = false;
       clearTimeout(this.changeTimeout);
-      if (this.tempValue) {
+      if (this.tempValue !== this.value) {
+        if (this.shouldValidate) {
+          await this.validateInput();
+        }
         this.$emit('input', this.tempValue);
       }
+      this.emitEvent(event);
+    },
+    onChange(event) {
       this.emitEvent(event);
     },
   },

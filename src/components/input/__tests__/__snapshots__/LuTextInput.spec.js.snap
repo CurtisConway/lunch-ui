@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuTextInput.vue should render component and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with a label prop and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left">
+    test
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with a persistentLabel prop and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left persistent">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with a success prop and match snapshot 1`] = `
+<div class="lu-form-group text-green border-green lu-input-outline"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with an errors list and match snapshot 1`] = `
+<div class="lu-form-group text-red border-red lu-input-outline"><label class="lu-text text-subtitle text-left focus">
+
+  </label> <input type="text">
+  <ul class="lu-error-list bg-red text-white pv-1 pr-2 pl-5 rad-1 grow-fade-enter grow-fade-enter-active">
+    <li class="mv-1">
+      error one
+    </li>
+    <li class="mv-1">
+      error two
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-input-underline"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 2`] = `
+<div class="lu-form-group text-black border-black lu-input-solid"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 3`] = `
+<div class="lu-form-group text-black border-black lu-input-solo elevation-3"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="text">
+  <!---->
+</div>
+`;
+
+exports[`LuTextInput.vue should render with type password and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left">
+
+  </label> <input type="password">
+  <!---->
+</div>
+`;
