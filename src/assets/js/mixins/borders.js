@@ -2,31 +2,31 @@ export default {
   props: {
     ba: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     bh: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     bv: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     bt: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     bb: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     bl: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     br: {
       type: Number,
-      default: 0,
+      default: () => 0,
     },
     borderStyle: {
       type: String,
