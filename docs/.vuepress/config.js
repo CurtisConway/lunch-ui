@@ -4,6 +4,7 @@ module.exports = {
   base: '/lunch-ui/',
   evergreen: true,
   themeConfig: {
+    repo: 'CurtisConway/lunch-ui',
     displayAllHeaders: true,
     nav: [
       {
