@@ -15,7 +15,20 @@ module.exports = {
         link: '/components/'
       },
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/components/': [
+        'mixins',
+        'text',
+        'grid',
+        'button',
+        'card',
+        'dialog',
+        'form-inputs',
+      ],
+      '/': [
+        '',
+      ],
+    },
     lastUpdated: 'Last Updated',
-  },
+  }
 };

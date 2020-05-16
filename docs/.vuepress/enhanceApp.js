@@ -1,11 +1,15 @@
 import LunchUI from '../../index';
 import '../../src/assets/sass/app.scss';
+import pageComponents from '@internal/page-components'
 
 export default ({
   Vue,
-  options,
+  data,
   router,
   siteData
 }) => {
-  Vue.use(LunchUI)
+  Vue.use(LunchUI);
+  for (const [name, component] of Object.entries(pageComponents)) {
+    Vue.component(name, component)
+  }
 }
