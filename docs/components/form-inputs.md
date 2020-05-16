@@ -30,13 +30,16 @@ These props are available to all form inputs.
 <ClientOnly>
 <LuRow>
 <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-<LuTextInput label="Outline Input" value="Easy"></LuTextInput>
+<LuTextInput label="Outline Input" value="Easy" color="blue"></LuTextInput>
 </LuColumn>
 <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-<LuTextInput label="Underline Input" value="As" inputStyle="underline"></LuTextInput>
+<LuTextInput label="Underline Input" value="As" inputStyle="underline" color="blue"></LuTextInput>
 </LuColumn>
 <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-<LuTextInput label="Solo Input" value="Lunch!" inputStyle="solo"></LuTextInput>
+<LuTextInput label="Solo Input" value="Lunch!" inputStyle="solo" color="blue"></LuTextInput>
+</LuColumn>
+<LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+<LuTextInput v-model="requiredVal" label="Required Input" color="blue" required :rules="[v => !!v || 'Input is required.']"></LuTextInput>
 </LuColumn>
 </LuRow>
 </ClientOnly>
@@ -44,13 +47,40 @@ These props are available to all form inputs.
 ```vue
 <LuRow>
     <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-        <LuTextInput label="Outline Input" value="Easy"></LuTextInput>
+        <LuTextInput 
+            label="Outline Input" 
+            value="Easy"
+        ></LuTextInput>
     </LuColumn>
     <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-        <LuTextInput label="Underline Input" value="As" inputStyle="underline"></LuTextInput>
+        <LuTextInput 
+            label="Underline Input" 
+            value="As" 
+            inputStyle="underline"
+        ></LuTextInput>
     </LuColumn>
     <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
-        <LuTextInput label="Solo Input" value="Lunch!" inputStyle="solo"></LuTextInput>
+        <LuTextInput 
+            label="Solo Input"
+            value="Lunch!" 
+            inputStyle="solo"
+        ></LuTextInput>
+    </LuColumn>
+    <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+        <LuTextInput 
+            label="Required Input" 
+            value="Lunch!" 
+            inputStyle="solo"
+        ></LuTextInput>
+    </LuColumn>
+    <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+        <LuTextInput 
+            label="Required Input" 
+            color="blue" 
+            v-model="requiredVal" 
+            :rules="[v => !!v || 'Input is required.']"
+            required
+        ></LuTextInput>
     </LuColumn>
 </LuRow>
 ```
@@ -60,3 +90,13 @@ These props are available to all form inputs.
 | Prop             | Type     | Default      | Description
 |------------------|----------|--------------|---------------
 | type             | String   | `text`       | Determines the input type _(text, password, email, tel, number, search)_
+
+<script>
+export default {
+  data () {
+      return {
+          requiredVal: '',
+      };
+  },
+}
+</script>
