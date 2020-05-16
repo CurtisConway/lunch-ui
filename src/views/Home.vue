@@ -39,6 +39,7 @@
           v-model="inputValue"
           label="Test Label"
           color="grey"
+          persistentLabel
           :errors="[
             'Too many words',
           ]"
@@ -50,6 +51,25 @@
           label="Test Label"
           color="grey"
           success
+        />
+      </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuTextInput
+          v-model="inputValue3"
+          label="Test Label"
+          color="blue"
+          inputStyle="underline"
+          :rules="[
+            v => !!v || 'Required',
+          ]"
+        />
+      </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuTextInput
+          v-model="inputValue4"
+          label="Test Label"
+          color="blue"
+          inputStyle="solo"
         />
       </LuColumn>
     </LuRow>
@@ -109,16 +129,15 @@
 </template>
 
 <script>
-
-import LuTextInput from "../components/input/LuTextInput";
 export default {
   name: 'Home',
-  components: {LuTextInput},
   data() {
     return {
       dialog: false,
       inputValue: '',
       inputValue2: '',
+      inputValue3: '',
+      inputValue4: '',
     };
   },
 };
