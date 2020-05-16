@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LuText.vue should render component and match snapshot 1`] = `<p class="lu-text text-black text-body"></p>`;
+exports[`LuText.vue should render component and match snapshot 1`] = `<p class="lu-text text-body text-left"></p>`;
 
-exports[`LuText.vue should render component with a bold prop and match snapshot 1`] = `<p class="lu-text text-black text-body text-bold"></p>`;
+exports[`LuText.vue should render component with a bold prop and match snapshot 1`] = `<p class="lu-text text-body text-left text-bold"></p>`;
 
-exports[`LuText.vue should render component with a color prop and match snapshot 1`] = `<p class="lu-text text-green text-body"></p>`;
+exports[`LuText.vue should render component with a color prop and match snapshot 1`] = `<p class="lu-text text-green text-body text-left"></p>`;
 
-exports[`LuText.vue should render component with a size prop and match snapshot 1`] = `<p class="lu-text text-black text-heading"></p>`;
+exports[`LuText.vue should render component with a size prop and match snapshot 1`] = `<p class="lu-text text-heading text-left"></p>`;
 
-exports[`LuText.vue should render component with a tag prop and match snapshot 1`] = `<h2 class="lu-text text-black text-body"></h2>`;
+exports[`LuText.vue should render component with a tag prop and match snapshot 1`] = `<h2 class="lu-text text-body text-left"></h2>`;
 
-exports[`LuText.vue should render component with a transform prop and match snapshot 1`] = `<p class="lu-text text-black text-uppercase text-body"></p>`;
+exports[`LuText.vue should render component with a transform prop and match snapshot 1`] = `<p class="lu-text text-uppercase text-body text-left"></p>`;
 
-exports[`LuText.vue should render component with an italic prop and match snapshot 1`] = `<p class="lu-text text-black text-body text-italic"></p>`;
+exports[`LuText.vue should render component with an italic prop and match snapshot 1`] = `<p class="lu-text text-body text-left text-italic"></p>`;
 
-exports[`LuText.vue should render component with an underline prop and match snapshot 1`] = `<p class="lu-text text-black text-body text-underline"></p>`;
+exports[`LuText.vue should render component with an underline prop and match snapshot 1`] = `<p class="lu-text text-body text-left text-underline"></p>`;
