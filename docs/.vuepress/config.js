@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         text: 'Components',
-        link: '/components/'
+        link: '/components/mixins'
       },
     ],
     sidebar: {
