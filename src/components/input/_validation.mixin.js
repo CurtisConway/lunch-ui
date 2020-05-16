@@ -1,5 +1,9 @@
 export default {
   props: {
+    required: {
+      type: Boolean,
+      default: () => false,
+    },
     rules: {
       type: Array,
       default: () => [],
@@ -28,13 +32,13 @@ export default {
       return this.errorList.length === 0;
     },
     shouldValidate() {
-      return this.rules.length > 0 && this.validate;
+      return (this.rules.length > 0 || this.errors.length > 0 || !this.isValid) && this.validate;
     },
   },
   methods: {
     validateInput() {
       return new Promise((resolve) => {
-        const newErrorList = [];
+        const newErrorList = [...this.errors];
         this.rules.forEach((rule) => {
           const value = rule(this.tempValue);
           if (value !== true) {

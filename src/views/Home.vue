@@ -39,7 +39,9 @@
           v-model="inputValue"
           label="Test Label"
           color="grey"
+          type="tel"
           persistentLabel
+          required
           :errors="[
             'Too many words',
           ]"
@@ -51,6 +53,7 @@
           label="Test Label"
           color="grey"
           success
+          required
         />
       </LuColumn>
       <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
@@ -58,6 +61,7 @@
           v-model="inputValue3"
           label="Test Label"
           color="blue"
+          type="password"
           inputStyle="underline"
           :rules="[
             v => !!v || 'Required',
@@ -134,7 +138,7 @@ export default {
   data() {
     return {
       dialog: false,
-      inputValue: '',
+      inputValue: 'asdadsasds',
       inputValue2: '',
       inputValue3: '',
       inputValue4: '',
