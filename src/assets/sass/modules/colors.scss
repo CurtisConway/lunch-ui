@@ -11,5 +11,8 @@
   .border-#{$key} {
     border-color: $value!important;
   }
+  .fill-#{$key} {
+    fill: $value!important;
+  }
 }
 // TODO FIX SPECIFICITY TO AVOID USING IMPORTANT

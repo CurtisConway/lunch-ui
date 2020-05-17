@@ -67,6 +67,42 @@ $inputSelectors: "\
     padding-left:$gutterWidth * 2;
     font-size:map-get($fontSizes, 'subtitle');
   }
+  select {
+    text-indent: 5px;
+    padding-left:$gutterWidth * 2;
+    transition:height .2s ease-in-out, color .2s linear;
+    overflow:hidden;
+
+    option {
+      padding:$gutterWidth * 3;
+    }
+
+    &[multiple="multiple"] {
+      //padding-top:$gutterWidth * 3;
+      padding-left:0;
+      color:transparent;
+
+      &:focus {
+        height:200px;
+        color:$black;
+        overflow-y:auto;
+      }
+    }
+  }
+
+  &.focus {
+    .triangle {
+      transform:rotate(180deg);
+    }
+  }
+  .triangle {
+    position:absolute;
+    right:$gutterWidth * 3;
+    z-index:3;
+    top:15px;
+    transition:transform .2s ease-in-out;
+    fill:red;
+  }
 
   .lu-error-list {
     position:absolute;

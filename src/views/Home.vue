@@ -76,6 +76,23 @@
           inputStyle="solo"
         />
       </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuSelectInput
+          v-model="selectValue"
+          :items="selectItems"
+          label="Test Label"
+          color="blue"
+        />
+      </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuSelectInput
+          v-model="multiSelectValue"
+          :items="selectItems"
+          label="Test Label"
+          color="blue"
+          multiple
+        />
+      </LuColumn>
     </LuRow>
     <LuRow>
       <LuColumn>
@@ -142,6 +159,13 @@ export default {
       inputValue2: '',
       inputValue3: '',
       inputValue4: '',
+      selectValue: '',
+      multiSelectValue: [],
+      selectItems: [
+        'Test Item 1',
+        'Test Item 2',
+        'Test Item 3',
+      ],
     };
   },
 };

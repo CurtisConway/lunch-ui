@@ -19,6 +19,9 @@ export default {
     bgColorFromColor() {
       return `bg-${this.color}`;
     },
+    fillColorFromColor() {
+      return `fill-${this.color}`;
+    },
     borderColorFromColor() {
       return `border-${this.color}`;
     },

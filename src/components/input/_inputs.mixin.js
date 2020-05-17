@@ -1,4 +1,11 @@
+import LuText from '../text/LuText.vue';
+import LuErrorList from './partials/_LuErrorList.vue';
+
 export default {
+  components: {
+    LuText,
+    LuErrorList,
+  },
   props: {
     elementId: {
       type: String,
@@ -6,7 +13,7 @@ export default {
     },
     value: {
       type: String,
-      default: () => '',
+      default: () => undefined,
     },
     label: {
       type: String,
@@ -53,6 +60,9 @@ export default {
         this.marginClasses,
         this.colorClass,
         this.inputStyleClasses,
+        {
+          focus: this.focus,
+        },
       ];
     },
     colorClass() {
@@ -66,7 +76,7 @@ export default {
     },
     labelClassList() {
       return {
-        focus: this.focus || this.value.length > 0,
+        focus: this.focus || (this.value != null && this.value.length > 0),
         persistent: this.persistentLabel,
       };
     },
