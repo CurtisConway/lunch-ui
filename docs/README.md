@@ -1,5 +1,7 @@
 # Usage Guide
 
+[![Build Status](https://travis-ci.org/CurtisConway/lunch-ui.svg?branch=master)](https://travis-ci.org/CurtisConway/lunch-ui)
+
 Lunch UI is a simple, opinionated, effective, efficient, and responsive component library.
 It's purpose is to create a seamless developer experience for building, managing, and 
 maintaining a Front-End UI.
