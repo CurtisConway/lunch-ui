@@ -1,35 +1,30 @@
 <template>
-  <div :class="defaultClassList">
-    <LuText
-      tag="label"
-      :for="computedId"
-      size="subtitle"
-      :class="labelClassList"
-    >
-      {{ label }}<span v-if="required">*</span>
-    </LuText>
-    <select
-      ref="inputElement"
-      :id="computedId"
-      v-model="valueInterface"
-      :multiple="multiple"
-      @change="onChange"
-      @focus="onFocus"
-      @blur="onBlur"
-    >
-      <option
-        v-for="(item, i) in mappedItems"
-        :key="`${computedId}-option-${i}`"
-        :value="item.value"
-      >
-        {{ item.label }}
-      </option>
-    </select>
+  <LuTextInput
+    v-bind="$props"
+    v-model="tempValue"
+    :typingTimeout="0"
+    ref="textInput"
+    :autoComplete="false"
+    @blur="onBlur"
+    @focus="onFocus"
+  >
     <LuTriangle :color="color" />
     <transition name="grow-fade">
-      <LuErrorList :errors="errorList" v-if="!isValid && focus" />
+      <ul
+        v-show="focus"
+        class="lu-select-list elevation-4"
+      >
+        <li
+          v-for="(item, i) in mappedItems"
+          :key="`${computedId}-option-label-${i}`"
+          class="ph-2"
+          @click="selectOption(item.value)"
+        >
+          {{ item.label }}
+        </li>
+      </ul>
     </transition>
-  </div>
+  </LuTextInput>
 </template>
 
 <script>
@@ -40,11 +35,13 @@ import events from '../../assets/js/mixins/events';
 import inputs from './_inputs.mixin';
 import validation from './_validation.mixin';
 import LuTriangle from './partials/_LuTriangle.vue';
+import LuTextInput from './LuTextInput.vue';
 
 export default {
   name: 'LuSelectInput',
   mixins: [colors, borders, spacing, events, inputs, validation],
   components: {
+    LuTextInput,
     LuTriangle,
   },
   props: {
@@ -81,6 +78,24 @@ export default {
           value: index,
         };
       });
+    },
+  },
+  methods: {
+    selectOption(value) {
+      this.tempValue = value;
+      this.$refs.textInput.tempValue = this.tempValue;
+    },
+    onBlur(event) {
+      const valueExists = this.mappedItems.find(item => item.value === this.tempValue);
+      if (!valueExists) {
+        this.tempValue = '';
+      }
+      this.$emit('input', this.tempValue);
+      this.$emit('change', this.tempValue);
+      this.$emit('blur', event);
+      setTimeout(() => {
+        this.focus = false;
+      }, 100);
     },
   },
 };
