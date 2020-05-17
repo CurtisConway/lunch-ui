@@ -35,6 +35,7 @@ describe('LuTextInput.vue', () => {
   it('should render with type password and match snapshot', () => {
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         type: 'password',
       },
     }).html()).toMatchSnapshot();
@@ -44,6 +45,7 @@ describe('LuTextInput.vue', () => {
   it('should render with a label prop and match snapshot', () => {
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         label: 'test',
       },
     }).html()).toMatchSnapshot();
@@ -52,18 +54,21 @@ describe('LuTextInput.vue', () => {
   it('should render with an inputStyle prop and match snapshot', () => {
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         inputStyle: 'underline',
       },
     }).html()).toMatchSnapshot();
 
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         inputStyle: 'solid',
       },
     }).html()).toMatchSnapshot();
 
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         inputStyle: 'solo',
       },
     }).html()).toMatchSnapshot();
@@ -72,6 +77,7 @@ describe('LuTextInput.vue', () => {
   it('should render with an errors list and match snapshot', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         errors: ['error one', 'error two'],
       },
     });
@@ -84,6 +90,7 @@ describe('LuTextInput.vue', () => {
   it('should render with a success prop and match snapshot', () => {
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         success: true,
       },
     }).html()).toMatchSnapshot();
@@ -92,6 +99,7 @@ describe('LuTextInput.vue', () => {
   it('should render with a persistentLabel prop and match snapshot', () => {
     expect(mountFunction({
       propsData: {
+        elementId: 'testInput',
         persistentLabel: true,
       },
     }).html()).toMatchSnapshot();
@@ -100,6 +108,7 @@ describe('LuTextInput.vue', () => {
   it('should pass the value prop to the input element', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
       },
     });
@@ -110,6 +119,7 @@ describe('LuTextInput.vue', () => {
   it('should emit a focus event', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
       },
     });
@@ -127,6 +137,7 @@ describe('LuTextInput.vue', () => {
   it('should emit a blur event', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
       },
     });
@@ -144,17 +155,19 @@ describe('LuTextInput.vue', () => {
   it('should emit an input event', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
       },
     });
 
     const event = jest.fn();
+    const inputElement = wrapper.find('input');
     wrapper.vm.$on('input', event);
     wrapper.vm.$refs.inputElement.focus();
-    wrapper.vm.$refs.inputElement.value = 'testing';
+    inputElement.setValue('testing');
     wrapper.vm.$refs.inputElement.blur();
     wrapper.vm.$refs.inputElement.focus();
-    wrapper.vm.$refs.inputElement.value = 'test';
+    inputElement.setValue('tester');
     wrapper.vm.$refs.inputElement.blur();
 
     expect(event.mock.calls).toHaveLength(2);
@@ -163,6 +176,7 @@ describe('LuTextInput.vue', () => {
   it('should be valid without any validation rules', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         rules: [],
       },
     });
@@ -173,6 +187,7 @@ describe('LuTextInput.vue', () => {
   it('should not be valid with validation rules that fail', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         rules: [v => !!v || 'Required'],
       },
     });
@@ -183,6 +198,7 @@ describe('LuTextInput.vue', () => {
   it('should be valid with validation rules that pass', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
         rules: [v => !!v || 'Required'],
       },
@@ -194,6 +210,7 @@ describe('LuTextInput.vue', () => {
   it('should be not valid after input if validation fails', async () => {
     const wrapper = mountFunction({
       propsData: {
+        elementId: 'testInput',
         value: 'test',
         rules: [v => !!v || 'Required'],
       },

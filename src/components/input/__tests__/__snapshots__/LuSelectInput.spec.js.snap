@@ -1,51 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LuSelectInput.vue should render component and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-1">
-    <!----></label> <select id="input-1"></select>
+<div class="lu-form-group text-black border-black lu-input-outline" items=""><label class="lu-text text-subtitle text-left" for="input-2">
+    <!----></label> <input id="input-2" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render component with items and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-5">
-    <!----></label> <select id="input-5">
-    <option value="test">
+<div class="lu-form-group text-black border-black lu-input-outline" items="test,test2"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;">
+    <li class="ph-2">
       test
-    </option>
-    <option value="test2">
+    </li>
+    <li class="ph-2">
       test2
-    </option>
-  </select>
+    </li>
+  </ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with a label prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-9">
+<div class="lu-form-group text-black border-black lu-input-outline" items=""><label class="lu-text text-subtitle text-left" for="testInput">
     test
-    <!----></label> <select id="input-9"></select>
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with a persistentLabel prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left persistent" for="input-34">
-    <!----></label> <select id="input-34"></select>
+<div class="lu-form-group text-black border-black lu-input-outline" items=""><label class="lu-text text-subtitle text-left persistent" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with a success prop and match snapshot 1`] = `
-<div class="lu-form-group text-green border-green lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-30">
-    <!----></label> <select id="input-30"></select>
+<div class="lu-form-group text-green border-green lu-input-outline" items=""><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with an errors list and match snapshot 1`] = `
-<div class="lu-form-group text-red border-red lu-input-outline"><label class="lu-text text-subtitle text-left focus" for="input-25">
-    <!----></label> <select id="input-25"></select>
+<div class="lu-form-group text-red border-red lu-input-outline focus" items=""><label class="lu-text text-subtitle text-left persistent" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4 grow-fade-enter grow-fade-enter-active" style=""></ul>
   <ul class="lu-error-list bg-red text-white pv-1 pr-2 pl-5 rad-1 grow-fade-enter grow-fade-enter-active">
     <li class="mv-1">
       error one
@@ -58,22 +76,31 @@ exports[`LuSelectInput.vue should render with an errors list and match snapshot 
 `;
 
 exports[`LuSelectInput.vue should render with an inputStyle prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-underline"><label class="lu-text text-subtitle text-left" for="input-13">
-    <!----></label> <select id="input-13"></select>
+<div class="lu-form-group text-black border-black lu-input-underline" items=""><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with an inputStyle prop and match snapshot 2`] = `
-<div class="lu-form-group text-black border-black lu-input-solid"><label class="lu-text text-subtitle text-left" for="input-17">
-    <!----></label> <select id="input-17"></select>
+<div class="lu-form-group text-black border-black lu-input-solid" items=""><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;
 
 exports[`LuSelectInput.vue should render with an inputStyle prop and match snapshot 3`] = `
-<div class="lu-form-group text-black border-black lu-input-solo elevation-3"><label class="lu-text text-subtitle text-left" for="input-21">
-    <!----></label> <select id="input-21"></select>
+<div class="lu-form-group text-black border-black lu-input-solo elevation-3" items=""><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="off" type="text"> <svg height="20" width="20" class="triangle fill-black">
+    <polygon points="10,13 15,7 5,7"></polygon>
+  </svg>
+  <ul class="lu-select-list elevation-4" style="display: none;"></ul>
   <!---->
 </div>
 `;

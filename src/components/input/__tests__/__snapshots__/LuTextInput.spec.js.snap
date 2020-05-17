@@ -2,36 +2,36 @@
 
 exports[`LuTextInput.vue should render component and match snapshot 1`] = `
 <div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-1">
-    <!----></label> <input id="input-1" type="text">
+    <!----></label> <input id="input-1" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with a label prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-9">
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="testInput">
     test
-    <!----></label> <input id="input-9" type="text">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with a persistentLabel prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left persistent" for="input-34">
-    <!----></label> <input id="input-34" type="text">
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left persistent" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with a success prop and match snapshot 1`] = `
-<div class="lu-form-group text-green border-green lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-30">
-    <!----></label> <input id="input-30" type="text">
+<div class="lu-form-group text-green border-green lu-input-outline"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with an errors list and match snapshot 1`] = `
-<div class="lu-form-group text-red border-red lu-input-outline"><label class="lu-text text-subtitle text-left focus" for="input-25">
-    <!----></label> <input id="input-25" type="text">
+<div class="lu-form-group text-red border-red lu-input-outline focus"><label class="lu-text text-subtitle text-left persistent" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <ul class="lu-error-list bg-red text-white pv-1 pr-2 pl-5 rad-1 grow-fade-enter grow-fade-enter-active">
     <li class="mv-1">
       error one
@@ -44,29 +44,29 @@ exports[`LuTextInput.vue should render with an errors list and match snapshot 1`
 `;
 
 exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-underline"><label class="lu-text text-subtitle text-left" for="input-13">
-    <!----></label> <input id="input-13" type="text">
+<div class="lu-form-group text-black border-black lu-input-underline"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 2`] = `
-<div class="lu-form-group text-black border-black lu-input-solid"><label class="lu-text text-subtitle text-left" for="input-17">
-    <!----></label> <input id="input-17" type="text">
+<div class="lu-form-group text-black border-black lu-input-solid"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with an inputStyle prop and match snapshot 3`] = `
-<div class="lu-form-group text-black border-black lu-input-solo elevation-3"><label class="lu-text text-subtitle text-left" for="input-21">
-    <!----></label> <input id="input-21" type="text">
+<div class="lu-form-group text-black border-black lu-input-solo elevation-3"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="text">
   <!---->
 </div>
 `;
 
 exports[`LuTextInput.vue should render with type password and match snapshot 1`] = `
-<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="input-5">
-    <!----></label> <input id="input-5" type="password">
+<div class="lu-form-group text-black border-black lu-input-outline"><label class="lu-text text-subtitle text-left" for="testInput">
+    <!----></label> <input id="testInput" autocomplete="on" type="password">
   <!---->
 </div>
 `;

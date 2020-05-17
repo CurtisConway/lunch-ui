@@ -65,27 +65,30 @@ $inputSelectors: "\
     border:none;
     z-index:1;
     padding-left:$gutterWidth * 2;
+    padding-top:$gutterWidth;
     font-size:map-get($fontSizes, 'subtitle');
   }
-  select {
-    text-indent: 5px;
-    padding-left:$gutterWidth * 2;
-    transition:height .2s ease-in-out, color .2s linear;
-    overflow:hidden;
 
-    option {
-      padding:$gutterWidth * 3;
-    }
+  .lu-select-list {
+    list-style-type:none;
+    position:absolute;
+    top:calc(100% + #{$gutterWidth});
+    background-color:#fff;
+    z-index:5;
+    width:100%;
+    padding:0;
+    margin:0;
+    max-height:250px;
+    overflow-y:auto;
 
-    &[multiple="multiple"] {
-      //padding-top:$gutterWidth * 3;
-      padding-left:0;
-      color:transparent;
+    li {
+      height:50px;
+      line-height:50px;
+      font-size:map-get($fontSizes, 'subtitle');
+      cursor:pointer;
 
-      &:focus {
-        height:200px;
-        color:$black;
-        overflow-y:auto;
+      &:hover {
+        background-color: #efefef;
       }
     }
   }
@@ -97,6 +100,7 @@ $inputSelectors: "\
   }
   .triangle {
     position:absolute;
+    pointer-events:none;
     right:$gutterWidth * 3;
     z-index:3;
     top:15px;

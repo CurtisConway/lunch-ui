@@ -160,11 +160,14 @@ export default {
       inputValue3: '',
       inputValue4: '',
       selectValue: '',
-      multiSelectValue: [],
+      multiSelectValue: '',
       selectItems: [
         'Test Item 1',
         'Test Item 2',
         'Test Item 3',
+        'Test Item 4',
+        'Test Item 5',
+        'Test Item 6',
       ],
     };
   },
