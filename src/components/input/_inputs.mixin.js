@@ -31,11 +31,19 @@ export default {
       type: String,
       default: () => 'black',
     },
+    typingTimeout: {
+      type: Number,
+      default: () => 500,
+    },
+    autoComplete: {
+      type: Boolean,
+      default: () => true,
+    },
   },
   data() {
     return {
       changeTimeout: 0,
-      tempValue: '',
+      tempValue: this.value,
       focus: false,
     };
   },
@@ -50,7 +58,7 @@ export default {
         this.changeTimeout = setTimeout(() => {
           this.validateInput();
           this.$emit('input', value);
-        }, 500);
+        }, this.typingTimeout);
       },
     },
     defaultClassList() {
@@ -75,9 +83,12 @@ export default {
       return [this.textColor, this.borderColorFromColor];
     },
     labelClassList() {
+      const isPersistent = this.focus
+        || (this.value != null && this.value.length > 0)
+        || (this.tempValue != null && this.tempValue.length > 0)
+        || this.persistentLabel;
       return {
-        focus: this.focus || (this.value != null && this.value.length > 0),
-        persistent: this.persistentLabel,
+        persistent: isPersistent,
       };
     },
     computedId() {
@@ -99,13 +110,16 @@ export default {
       this.emitEvent(event);
     },
     onBlur(event) {
-      this.focus = false;
       clearTimeout(this.changeTimeout);
       if (this.tempValue !== this.value) {
         this.validateInput();
         this.$emit('input', this.tempValue);
       }
       this.emitEvent(event);
+
+      setTimeout(() => {
+        this.focus = false;
+      }, 100);
     },
     onChange(event) {
       this.emitEvent(event);

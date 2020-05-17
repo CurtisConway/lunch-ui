@@ -8,10 +8,12 @@
       :id="computedId"
       :type="inputType"
       v-model="valueInterface"
+      :autocomplete="autoComplete ? 'on' : 'off'"
       @change="onChange"
       @focus="onFocus"
       @blur="onBlur"
     >
+    <slot :focus="focus"></slot>
     <transition name="grow-fade">
       <LuErrorList :errors="errorList" v-if="!isValid && focus" />
     </transition>
