@@ -1,5 +1,7 @@
 # lunch-ui
 
+[![Build Status](https://travis-ci.org/CurtisConway/lunch-ui.svg?branch=master)](https://travis-ci.org/CurtisConway/lunch-ui)
+
 ## Docs
 https://curtisconway.github.io/lunch-ui/
 
