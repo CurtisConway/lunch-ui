@@ -14,6 +14,8 @@ These props are available to all form inputs.
 | inputStyle       | String   | `undefined`  | Determines the style of the input (outline, underline, solo)
 | persistentLabel  | Boolean  | `false`      | Keeps the label pinned to the top of the input, does not animate it
 | color            | String   | `black`      | Determines the theme color of the input - border color and text color
+| typingTimeout    | Number   | `500`        | Determines the timeout on typing for the input to emit an input event
+| autoComplete     | Boolean  | `true`       | Determines the autocomplete state of the input
 
 ### Validation
 
@@ -28,7 +30,7 @@ These props are available to all form inputs.
 ## Text Input
 
 <ClientOnly>
-<LuRow>
+<LuRow pv="2">
 <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
 <LuTextInput label="Outline Input" value="Easy" color="blue"></LuTextInput>
 </LuColumn>
@@ -45,7 +47,7 @@ These props are available to all form inputs.
 </ClientOnly>
 
 ```vue
-<LuRow>
+<LuRow pv="2">
     <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
         <LuTextInput 
             label="Outline Input" 
@@ -90,6 +92,47 @@ These props are available to all form inputs.
 | Prop             | Type     | Default      | Description
 |------------------|----------|--------------|---------------
 | type             | String   | `text`       | Determines the input type _(text, password, email, tel, number, search)_
+
+
+## Select Input
+
+<ClientOnly>
+<LuRow pv="2">
+<LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+<LuSelectInput label="Select Input" :items="['Easy', 'As', 'Lunch']" color="blue"></LuSelectInput>
+</LuColumn>
+<LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+<LuSelectInput label="Select Input" :items="['Easy', 'As', 'Lunch']" inputStyle="underline" color="blue"></LuSelectInput>
+</LuColumn>
+</LuRow>
+</ClientOnly>
+
+```vue
+<LuRow pv="2">
+    <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+        <LuSelectInput 
+            label="Select Input" 
+            :items="['Easy', 'As', 'Lunch']" 
+            color="blue"
+        ></LuSelectInput>
+    </LuColumn>
+    <LuColumn :columnSizes="{xs: 12, md: 6}" pa="2">
+        <LuSelectInput 
+            label="Select Input" 
+            :items="['Easy', 'As', 'Lunch']" 
+            inputStyle="underline" 
+            color="blue"
+        ></LuSelectInput>
+    </LuColumn>
+</LuRow>
+```
+
+### Props
+| Prop             | Type     | Default      | Description
+|------------------|----------|--------------|---------------
+| items            | Array    | `[]`         | The items to select from can either be an array of strings or an array of objects with a `label` and `value` key _(ex. `[{label: 'foo', value: 'bar'}]`)_
+| multiple         | Boolean  | `false`      | Allows multiple selection of items (requires and will return an array as the value)
+
 
 <script>
 export default {
