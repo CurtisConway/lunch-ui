@@ -117,9 +117,9 @@ export default {
       }
       this.emitEvent(event);
 
-      setTimeout(() => {
+      this.$nextTick(() => {
         this.focus = false;
-      }, 100);
+      });
     },
     onChange(event) {
       this.emitEvent(event);

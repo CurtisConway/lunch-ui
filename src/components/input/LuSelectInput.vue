@@ -57,6 +57,10 @@ export default {
       type: [String, Array],
       default: () => undefined,
     },
+    typingTimeout: {
+      type: Number,
+      default: () => 0,
+    },
   },
   computed: {
     mappedItems() {
