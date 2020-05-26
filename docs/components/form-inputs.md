@@ -134,11 +134,50 @@ These props are available to all form inputs.
 | multiple         | Boolean  | `false`      | Allows multiple selection of items (requires and will return an array as the value)
 
 
+
+## Toggle Input
+
+<ClientOnly>
+<LuRow pv="2">
+<LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+<LuToggleInput label="Easy" :value="toggle1" color="blue"></LuToggleInput>
+</LuColumn>
+<LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+<LuToggleInput label="As" :value="toggle2" color="deep-orange"></LuToggleInput></LuSelectInput>
+</LuColumn>
+<LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+<LuToggleInput label="Lunch" :value="toggle3" color="green"></LuToggleInput></LuSelectInput>
+</LuColumn>
+</LuRow>
+</ClientOnly>
+
+```vue
+<LuRow pv="2">
+    <LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+        <LuToggleInput label="Easy" :value="toggle1" color="blue"></LuToggleInput>
+    </LuColumn>
+    <LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+        <LuToggleInput label="As" :value="toggle2" color="deep-orange"></LuToggleInput></LuSelectInput>
+    </LuColumn>
+    <LuColumn :columnSizes="{xs: 12, md: 4}" pa="2">
+        <LuToggleInput label="Lunch" :value="toggle3" color="green"></LuToggleInput></LuSelectInput>
+    </LuColumn>
+</LuRow>
+```
+
+### Props
+| Prop             | Type     | Default      | Description
+|------------------|----------|--------------|---------------
+| value            | Boolean  | `false`      | The value of the toggle
+
 <script>
 export default {
   data () {
       return {
           requiredVal: '',
+          toggle1: false,
+          toggle2: true,
+          toggle3: false,
       };
   },
 }
