@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuToggleInput.vue should render component and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-toggle-input"><label class="lu-text text-subtitle text-left" for="input-1">
+
+  </label> <input id="input-1" type="checkbox" class="bg-black"> </div>
+`;
+
+exports[`LuToggleInput.vue should render component with a value and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-toggle-input"><label class="lu-text text-subtitle text-left" for="testInput">
+
+  </label> <input id="testInput" type="checkbox" class="bg-black"> </div>
+`;
+
+exports[`LuToggleInput.vue should render with a label prop and match snapshot 1`] = `
+<div class="lu-form-group text-black border-black lu-toggle-input"><label class="lu-text text-subtitle text-left" for="testInput">
+    test
+  </label> <input id="testInput" type="checkbox" class="bg-black"> </div>
+`;

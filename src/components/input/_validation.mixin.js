@@ -46,10 +46,12 @@ export default {
           }
         });
         this.errorList = newErrorList;
-        if (!this.isValid) {
-          this.emitFailure();
-        } else {
-          this.emitSuccess();
+        if (this.shouldValidate) {
+          if (!this.isValid) {
+            this.emitFailure();
+          } else {
+            this.emitSuccess();
+          }
         }
         resolve({
           component: this,

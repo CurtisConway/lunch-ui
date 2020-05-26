@@ -6,6 +6,7 @@ import LuCard from './card/LuCard.vue';
 import LuDialog from './dialog/LuDialog.vue';
 import LuTextInput from './input/LuTextInput.vue';
 import LuSelectInput from './input/LuSelectInput.vue';
+import LuToggleInput from './input/LuToggleInput.vue';
 
 const Components = {
   LuRow,
@@ -16,6 +17,7 @@ const Components = {
   LuDialog,
   LuTextInput,
   LuSelectInput,
+  LuToggleInput,
 };
 
 export default Components;

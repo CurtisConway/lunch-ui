@@ -93,6 +93,13 @@
           multiple
         />
       </LuColumn>
+      <LuColumn pa="2" :columnSizes="{xs: 12, sm: 6}">
+        <LuToggleInput
+          v-model="toggle"
+          label="Test Toggle Label"
+          color="deep-orange"
+        />
+      </LuColumn>
     </LuRow>
     <LuRow>
       <LuColumn>
@@ -150,8 +157,10 @@
 </template>
 
 <script>
+import LuToggleInput from "../components/input/LuToggleInput";
 export default {
   name: 'Home',
+  components: {LuToggleInput},
   data() {
     return {
       dialog: false,
@@ -169,6 +178,7 @@ export default {
         'Test Item 5',
         'Test Item 6',
       ],
+      toggle: false,
     };
   },
 };
